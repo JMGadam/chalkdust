@@ -5,40 +5,31 @@ $hpCode = file_get_contents('includes/template/html/hp.html');
 
 $channelBar = '<div id="sw-channel-list-container">
 <ul id="channel-navigation" class="sw-channel-list" role="menubar">
-<li class="sw-channel-item active first" role="menuitem" style="z-index: 7000;"><a href="/Page/97"><span class="icon-font"></span></a></li>
-<li class="sw-channel-item" role="menuitem" aria-haspopup="true" style="z-index: 6998;" aria-hidden="true">
-<a href="/domain/71">
+<li class="sw-channel-item  first" role="menuitem" aria-haspopup="true" style="z-index: 7000;">
+<a href="/domain/104">
 <span>About Us</span></a>
 <ul class="sw-channel-dropdown" aria-hidden="true" role="menu" style="display: none;">
-<li class="" role="menuitem"><a href="/domain/78" tabindex="-1"><span>Welcome</span></a></li>
-<li class="" role="menuitem"><a href="/domain/79" tabindex="-1"><span>Our Mission</span></a></li>
-<li class="" role="menuitem"><a href="/domain/80" tabindex="-1"><span>Contact Us</span></a></li>
+<li class="" role="menuitem"><a href="/domain/104" tabindex="-1"><span>Contact</span></a></li>
+<li class="" role="menuitem"><a href="/domain/105" tabindex="-1"><span>Our Mission</span></a></li>
+<li class="" role="menuitem"><a href="/domain/142" tabindex="-1"><span>Staff</span></a></li>
 </ul>
-</li><li class="sw-channel-item " role="menuitem" aria-haspopup="true" style="z-index: 6996;">
-<a href="/domain/186">
-<span>Classrooms</span></a>
+</li><li class="sw-channel-item " role="menuitem" aria-haspopup="true" style="z-index: 6998;">
+<a href="/domain/96">
+<span>Digital Learning Day</span></a>
 <ul class="sw-channel-dropdown" aria-hidden="true" role="menu" style="display: none;">
-<li class="" role="menuitem"><a href="/domain/186" tabindex="-1"><span>Section One</span></a></li>
-<li class="" role="menuitem"><a href="/domain/188" tabindex="-1"><span>Section Two</span></a></li>
-<li class="" role="menuitem"><a href="/domain/189" tabindex="-1"><span>Section Three</span></a></li>
-<li class="" role="menuitem"><a href="/domain/190" tabindex="-1"><span>Section Four</span></a></li>
+<li class="" role="menuitem"><a href="/domain/138" tabindex="-1"><span>Section One</span></a></li>
+<li class="" role="menuitem"><a href="/domain/139" tabindex="-1"><span>Section Two</span></a></li>
 </ul>
-</li><li class="sw-channel-item " role="menuitem" aria-haspopup="true" style="z-index: 6994;">
-<a href="/domain/187">
-<span>Academics</span></a>
+</li><li class="sw-channel-item " role="menuitem" style="z-index: 6996;">
+<a href="/domain/208">
+<span>Starting A Charter</span></a>
+</li><li class="sw-channel-item  last" role="menuitem" aria-haspopup="true" style="z-index: 6994;">
+<a href="/domain/145">
+<span>New Charters</span></a>
 <ul class="sw-channel-dropdown" aria-hidden="true" role="menu" style="display: none;">
-<li class="" role="menuitem"><a href="/domain/187" tabindex="-1"><span>Section One</span></a></li>
-<li class="" role="menuitem"><a href="/domain/191" tabindex="-1"><span>Section Two</span></a></li>
-<li class="" role="menuitem"><a href="/domain/192" tabindex="-1"><span>Section Three</span></a></li>
+<li class="" role="menuitem"><a href="/domain/146" tabindex="-1"><span>test section</span></a></li>
 </ul>
-</li><li class="sw-channel-item " role="menuitem" style="z-index: 6992;">
-<a href="/domain/212">
-<span>Programs</span></a>
-</li><li class="sw-channel-item " role="menuitem" style="z-index: 6990;">
-<a href="/domain/213">
-<span>My View</span></a>
-</li><li class="sw-channel-item  last" role="menuitem" style="z-index: 6988;"><a href="/Page/98"><span>Calendar</span></a></li>
-</ul><div class="clear"></div>
+</li></ul><div class="clear"></div>
 </div>';
 
 $hpCodeRP = str_replace("[channelbar]", $channelBar, $hpCode);
