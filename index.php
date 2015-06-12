@@ -1,7 +1,7 @@
 <?php
 include("includes/start-page.html");
 
-$hpCode = file_get_contents('includes/hp.html');
+$hpCode = file_get_contents('includes/template/html/hp.html');
 
 $channelBar = '<div id="sw-channel-list-container">
 <ul id="channel-navigation" class="sw-channel-list" role="menubar">

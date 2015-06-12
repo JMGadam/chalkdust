@@ -2,5 +2,68 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="includes/sw/system.css"/>
 	<link rel="stylesheet" type="text/css" href="includes/sw/apps.css"/>
+	<link rel="stylesheet" type="text/css" href="includes/sw/jQueryUI.css"/>
+
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
+	<script src='includes/sw/jquery-migrate-1.2.1.js' type='text/javascript'></script>
+
+	<script type="text/javascript">
+	    $(document).ready(function() {
+	        channelHoverIE();
+	        channelTouch();
+	    });
+
+	    function channelTouch() {
+	        // this will change the dropdown behavior when it is touched vs clicked.
+	        // channels will be clickable on second click. first click simply opens the menu.
+	        $('#channel-navigation > .sw-channel-item > a').on({
+	            'touchstart': function (e) {
+	                
+	                // see if has menu
+	                if ($(this).siblings('ul.sw-channel-dropdown').length > 0) {
+	                    var button = $(this);
+
+	                    // add href as property if not already set
+	                    // then remove href attribute
+	                    if (!button.prop('linkHref')) {
+	                        button.prop('linkHref', button.attr('href'));
+	                        button.removeAttr('href');
+	                    }
+
+	                    // check to see if menu is already open
+	                    if ($(this).siblings('ul.sw-channel-dropdown').is(':visible')) {
+	                        // if open go to link
+	                        window.location.href = button.prop('linkHref');
+	                    } 
+
+	                } 
+	            }
+	        });
+	    }
+
+
+	    
+	    function channelHoverIE(){
+			// set z-index for IE7
+			var parentZindex = $('#channel-navigation').parents('div:first').css('z-index');
+			var zindex = (parentZindex > 0 ? parentZindex : 8000);
+			$(".sw-channel-item").each(function(ind) {
+				$(this).css('z-index', zindex - ind);
+				zindex --;
+			});
+		    $(".sw-channel-item").hover(function(){
+		        var subList = $(this).children('ul');
+		        if ($.trim(subList.html()) !== "") {
+			        subList.show();
+			    }
+			    $(this).addClass("hover");
+		    }, function(){
+			    $(".sw-channel-dropdown").hide();
+			    $(this).removeClass("hover");
+		    });
+	    }
+
+	</script>
+
 </head>
 <body>
