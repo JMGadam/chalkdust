@@ -1,4 +1,42 @@
-<div id="hp-body">
-	<h1>Hi there</h1>
-	[channelbar]
+<div id="gb-page" class="hp">
+	<div id="gb-header-outer">
+		<div id="gb-header">
+			<div id="gb-logo" class="hidden"></div>
+			<div id="gb-sitename"></div>
+		</div>
+	</div>
+	<div id="gb-channel-list-outer">
+		<div id="gb-channel-list">
+			[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]
+		</div>
+	</div>
+	<div id="hp-slideshow-outer">
+		<div id="hp-slideshow">
+			[$ContentRegion props="ContainerNumber:10"$]
+		</div>
+	</div>
+	<div id="hp-content-outer">
+		<div id="hp-content" class="ui-clear">
+			<div class="hp column one">
+				[$ContentRegion props="ContainerNumber:1"$]
+			</div>
+			<div class="hp column two">
+				[$ContentRegion props="ContainerNumber:2"$]
+			</div>
+			<div class="hp column three">
+			</div>
+		</div>
+	</div>
+	<div id="gb-footer-outer">
+		<div id="gb-footer" class="ui-clear">
+			<div class="gb footer one">
+				<p>[$SiteAddressOne$]</p>	
+				<p>[$SiteCity$], [$SiteState$] [$SiteZip$]</p>	
+			</div>
+			<div class="gb footer two">
+				<p>[$SiteContactPhone$]</p>
+				<p>[$SiteContactFax$]</p>
+			</div>
+		</div>
+	</div>
 </div>

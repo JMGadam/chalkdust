@@ -1,0 +1,820 @@
+/* ------------------------------------------------------------ */
+/* ---------- BEGIN STANDARD ---------- */
+/* ------------------------------------------------------------ */
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+/* GroupBegin Mystart */
+#sw-mystart-outer {
+	display: none;
+}
+#sw-myaccount-list {
+	top: 100%;
+}
+.sw-mystart-dropdown .sw-dropdown {
+	top: 100%;
+}
+.sw-mystart-dropdown .sw-dropdown-arrow {
+	height: 14px;
+	width: 17px;
+	top: 2px;
+	right: 1px;
+	background: none;
+	padding: 2px 0px 0px 6px;
+	color: #999;
+	font-size: 11px;
+}
+#sw-myaccount .sw-myaccount-chevron {
+	background: none;
+	font-size: 10px;
+	color: #FFF;
+	top: 5px;
+	right: 6px;
+}
+#sw-mystart-account.clicked-state:hover .sw-myaccount-chevron {
+	background: none;
+	color: #000;
+}
+/* GroupEnd */ 
+ 
+/* GroupBegin Global */
+@-ms-viewport {
+	width: device-width;
+} 
+body {
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+body:before {
+	content: "desktop";
+	display: none;
+}
+.show960 {
+	display: block;
+}
+.hide960 {
+	display: none;
+}
+.hidden {
+	display: none;
+}
+.ui-clear:after {
+	content: "";
+}
+.border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+div.sw-special-mode-bar {
+	position: fixed !important;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+.gb-section-parent {
+	position: relative;
+}
+.gb-section {
+	max-width: 960px;
+	margin: 0px auto;
+}
+#gb-page {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#gb-header-outer {
+	position: relative;
+}
+#gb-header {
+	max-width: 960px;
+	margin: 0px auto;
+}
+#gb-logo {
+	
+}
+#gb-logo img {
+	max-width: 100%;
+	max-height: 100%;
+}
+#gb-channel-list-outer {
+	position: relative;
+}
+#gb-channel-list {
+	max-width: 960px;
+	min-height: 39px;
+	margin: 0px auto;
+}
+#gb-footer-outer {
+	position: relative;
+}
+#gb-footer {
+	max-width: 960px;
+	margin: 0px auto;
+}
+.gb.footer p {
+	margin: 0px;
+	padding: 0px;
+}
+.gb.footer.one {
+	width: 50%;
+	float: left;	
+}
+.gb.footer.two {
+	width: 50%;
+	float: left;	
+}
+#sw-footer-outer {
+	display: none;
+}
+/* GroupEnd */
+
+/* GroupBegin App Styles */
+div.ui-widget.app div.ui-widget-header h1, div.ui-widget.app.navigation div.ui-widget-header h1 {
+
+}
+.headlines .ui-article-thumb .img {
+	margin: 0px 10px 0px 0px;
+}
+.headlines .custom-read-more {
+	padding: 0px 0px 0px 10px;
+}
+a.more-link {
+	display: block;
+	text-align: right;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+	padding: 0px 10px 0px 0px;
+}
+.ui-btn-general-primary, .ui-btn-general, .ui-btn-toolbar, .ui-btn-toggle {
+	line-height: 1;
+}
+#calendar-pnl-smcalendar {
+	display: block;
+}
+#cal-event-detail-col1, #cal-event-detail-col2 {
+	width: 100% !important;
+	padding: 10px 0px 0px;
+}
+.cal-ed-header-title {
+	width: auto;
+}
+.ui-column-one.region {
+	width: auto;
+	clear: both;
+}
+.ui-column-one-quarter.region {
+	width: 25%;
+	float: left;
+}
+.ui-column-one-half.region {
+	width: 50%;
+	float: left;
+}
+.ui-column-one-third.region {
+	width: 33%;
+	float: left;
+}
+.ui-column-two-thirds.region {
+	width: 66%;
+	float: left;
+}
+.region.right {
+	float: right;
+}
+.region.clearleft {
+	clear: left;
+}
+/* GroupEnd */
+
+/* GroupBegin Photo Area */
+#hp-slideshow-outer {
+	position: relative;
+}
+#hp-slideshow {
+	max-width: 960px;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+}
+/* GroupEnd */
+
+/* GroupBegin Homepage */
+.column {
+	float: left;
+	position: relative;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+#hp-content-outer {
+	position: relative;
+}
+#hp-content {
+	max-width: 960px;
+	margin: 0px auto;
+	position: relative;
+}
+.hp.column.one {
+	width: 25%;
+	padding: 0px 10px 0px 0px;
+}
+.hp.column.two {
+	width: 50%;
+	padding: 0px 10px;
+}
+.hp.column.three {
+	width: 25%;
+	padding: 0px 0px 0px 10px;
+}
+/* GroupEnd */
+
+/* GroupBegin Subpage */
+#sp-content-outer {
+	position: relative;
+}
+#sp-content {
+	max-width: 960px;
+	margin: 0px auto;
+	position: relative;
+}
+.sp.column.one {
+	width: 25%;
+	min-height: 500px;
+	padding: 0px 10px 0px 0px;
+}
+.sp.column.two {
+	width: 75%;
+	min-height: 500px;
+	padding: 0px 0px 0px 10px;
+}
+/* GroupEnd */
+
+/* GroupBegin Subpage No Nav */
+#spn-content-outer {
+	position: relative;
+}
+#spn-content {
+	max-width: 960px;
+	min-height: 500px;
+	margin: 0px auto;
+	padding: 10px;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* GroupEnd */ 
+
+/* GroupBegin Navigation Styles */
+div.ui-widget.app.navigation li div.bullet.expandable{
+	background-position: -5px -10px;
+}
+div.ui-widget.app.navigation li div.bullet.collapsible{
+	background-position: -5px -10px;
+}
+div.ui-widget.app.navigation li div.bullet{
+	background-position: -5px -10px;
+}
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+div#sw-channel-list-container {
+	display: block;
+	width: auto;
+	max-width: 960px;
+}
+ul.sw-channel-list {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+ul.sw-channel-list li.sw-channel-item {
+	float: left;
+	height: 39px;
+	list-style: none outside none;
+	margin: 0;
+	position: relative;
+}
+li.sw-channel-item > a {
+	color: #CCCCCC;
+	display: block;
+	height: 100%;
+	padding: 0 15px 0 0;
+	text-decoration: none;
+}
+li.sw-channel-item > a span {
+	display: block;
+	padding: 10px 0 11px 15px;
+}
+li.sw-channel-item.hover > a {
+	color: #000000;
+}
+li.sw-channel-item.hover > a span {
+
+}
+li.sw-channel-item.active > a {
+	color: #000000;
+}
+li.sw-channel-item.active > a span {
+
+}
+/* GroupEnd */ 
+
+/* GroupBegin Channel Bar Dropdown Styles */
+ul.sw-channel-dropdown {
+	background: none repeat scroll 0 0 #F3F3F3;
+	border: 1px solid #CCCCCC;
+	display: none;
+	font-size: 12px;
+	font-weight: normal;
+	left: 0;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	width: 180px;
+	z-index: 7001;
+}
+ul.sw-channel-dropdown li {
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	display: block;
+	height: auto;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	white-space: pre-wrap;
+	width: 180px;
+}
+ul.sw-channel-dropdown li a,
+ul.sw-channel-dropdown li.sw-channel-more-li a {
+	background: none repeat scroll 0 0 transparent;
+	color: #666666;
+	display: block;
+	padding: 7px 10px;
+	text-decoration: none;
+	width: 160px;
+}
+ul.sw-channel-dropdown li a:hover,
+ul.sw-channel-dropdown li.sw-channel-more-li a:hover {
+	background: none repeat scroll 0 0 #E2E2E2;
+	color: #000000;
+}
+ul.sw-channel-dropdown li.sw-channel-more-li a span.sw-channel-more-span {
+	color: #666666;
+}   
+ul.sw-channel-dropdown li.sw-channel-more-li a:hover span.sw-channel-more-span {
+	color: #000000;
+}        
+/* GroupEnd */ 
+
+/* GroupBegin EditorStyles */
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 1;
+	font-weight: normal;
+	color: #333;
+}
+h1 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h2 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h3 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h4 {
+	font-size: 14px;
+	font-weight: normal;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h5 {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h6 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+.title {
+	font-weight:bold;
+}
+.subtitle {
+	font-style:italic;
+}     
+/* GroupEnd */
+
+/* ------------------------------------------------------------ */
+/* ---------- END STANDARD ---------- */
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+/* ---------- BEGIN 768+ ---------- */
+/* ------------------------------------------------------------ */
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+/* GroupBegin Mystart */
+
+/* GroupEnd */ 
+ 
+/* GroupBegin Global */
+body:before {
+	content: "768";
+}
+.show768 {
+	display: block;
+}
+.hide768 {
+	display: none;
+}
+/* GroupEnd */
+
+/* GroupBegin Responsive Menu */
+
+/* GroupEnd */
+
+/* GroupBegin App Styles */
+#calendar-pnl-calendarcontainer {
+	min-width: 0px;
+}
+#calendar-pnl-smcalendar {
+	display: none;
+}
+.ui-column-one-quarter.region {
+	width: 50%;
+	float: left;
+	clear: left;
+}
+.ui-column-one-third.region {
+	width: 50%;
+	float: left;
+}
+.ui-column-two-thirds.region {
+	width: 50%;
+	float: left;
+}
+.region.right {
+	float: left;
+}
+.region.clearleft {
+	clear: none;
+}                  
+/* GroupEnd */
+
+/* GroupBegin Photo Area */
+
+/* GroupEnd */
+
+/* GroupBegin Mod Events */
+
+/* GroupEnd */
+
+/* GroupBegin Tab Block */
+
+/* GroupEnd */
+
+/* GroupBegin Homepage */
+
+/* GroupEnd */
+
+/* GroupBegin Subpage */
+.sp.column.one {
+	min-height: 0px;
+}
+.sp.column.two {
+	min-height: 0px;
+}
+/* GroupEnd */
+
+/* GroupBegin Subpage No Nav */
+#spn-content {
+	min-height: 0px;
+}
+/* GroupEnd */ 
+
+/* GroupBegin Navigation Styles */
+
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+
+/* GroupEnd */ 
+
+/* GroupBegin Channel Bar Dropdown Styles */
+ul.sw-channel-list li.sw-channel-item.last ul.sw-channel-dropdown {
+	left: auto;
+	right: 0px;
+}
+/* GroupEnd */
+
+/* ------------------------------------------------------------ */
+/* ---------- END 768+ ---------- */
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+/* ---------- BEGIN 640+ ---------- */
+/* ------------------------------------------------------------ */
+                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+/* GroupBegin Mystart */
+
+/* GroupEnd */ 
+ 
+/* GroupBegin Global */
+body:before {
+	content: "640";
+}
+.show640 {
+	display: block;
+}
+.hide640 {
+	display: none;
+}
+/* GroupEnd */
+
+/* GroupBegin App Styles */
+.ui-column-one.region {
+	width: auto;
+	clear: none;
+}
+.ui-column-one-quarter.region {
+	width: auto;
+	float: none;
+}
+.ui-column-one-half.region {
+	width: auto;
+	float: none;
+}
+.ui-column-one-third.region {
+	width: auto;
+	float: none;
+}
+.ui-column-two-thirds.region {
+	width: auto;
+	float: none;
+}
+.region.right {
+	float: none;
+}
+input.ui-txt-general.medium, textarea.ui-txt-general.medium, input.ui-txt-heading.medium {
+	width: 80%;
+}
+/* GroupEnd */
+
+/* GroupBegin Photo Area */
+
+/* GroupEnd */
+
+/* GroupBegin Mod Events */
+
+/* GroupEnd */
+
+/* GroupBegin Tab Block */
+
+/* GroupEnd */
+
+/* GroupBegin Homepage */
+
+/* GroupEnd */
+
+/* GroupBegin Subpage */
+
+/* GroupEnd */
+
+/* GroupBegin Subpage No Nav */
+
+/* GroupEnd */ 
+
+/* GroupBegin Navigation Styles */
+
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+
+/* GroupEnd */ 
+
+/* GroupBegin Channel Bar Dropdown Styles */
+   
+/* GroupEnd */
+
+/* ------------------------------------------------------------ */
+/* ---------- END 640+ ---------- */
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+/* ---------- BEGIN 480+ ---------- */
+/* ------------------------------------------------------------ */
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+/* GroupBegin Mystart */
+
+/* GroupEnd */ 
+ 
+/* GroupBegin Global */
+body:before {
+	content: "480";
+}
+.show480 {
+	display: block;
+}
+.hide480 {
+	display: none;
+}
+/* GroupEnd */
+
+/* GroupBegin Responsive Pagelist Menu */
+
+/* GroupEnd */
+
+/* GroupBegin App Styles */
+#hp-content .ui-widget-detail {
+	display:none;
+}
+#hp-content .ui-widget-footer {
+	display:none;
+}
+#hp-content .ui-widget.app.active .ui-widget-detail, #hp-content .ui-widget.app.no-header .ui-widget-detail {
+	display:block;
+}
+#hp-content .ui-widget.app.active .ui-widget-footer, #hp-content .ui-widget.app.no-header .ui-widget-footer {
+	display:block;
+}
+#calendar-pnl-filter-toggle, 
+#calendar-pnl-buttons-top {
+	display: none;	
+}
+#calendar-pnl-dateselect {
+	float: left;
+	clear: both;
+}
+#calendar-pnl-title {
+	width: auto;	
+}
+#cal-event-detail-header h1 {
+	margin: 0px;
+}
+/* GroupEnd */
+
+/* GroupBegin Photo Area */
+
+/* GroupEnd */
+
+/* GroupBegin Mod Events */
+
+/* GroupEnd */
+
+/* GroupBegin Tab Block */
+
+/* GroupEnd */
+
+/* GroupBegin Homepage */
+
+/* GroupEnd */
+
+/* GroupBegin Subpage */
+.sp.column.two {
+	width: auto;
+	float: none;
+}
+/* GroupEnd */
+
+/* GroupBegin Subpage No Nav */
+
+/* GroupEnd */ 
+
+/* GroupBegin Navigation Styles */
+
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+
+/* GroupEnd */ 
+
+/* GroupBegin Channel Bar Dropdown Styles */
+   
+/* GroupEnd */
+
+/* ------------------------------------------------------------ */
+/* ---------- END 480+ ---------- */
+/* ------------------------------------------------------------ */ 
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------ */
+/* ---------- BEGIN 320+ ---------- */
+/* ------------------------------------------------------------ */                 
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+/* GroupBegin Mystart */
+
+/* GroupEnd */ 
+ 
+/* GroupBegin Global */
+body:before {
+	content: "320";
+}
+.show320 {
+	display: block;
+}
+.hide320 {
+	display: none;
+}
+/* GroupEnd */
+
+/* GroupBegin App Styles */
+
+/* GroupEnd */
+
+/* GroupBegin Photo Area */
+
+/* GroupEnd */
+
+/* GroupBegin Mod Events */
+
+/* GroupEnd */
+
+/* GroupBegin Tab Block */
+
+/* GroupEnd */
+
+/* GroupBegin Homepage */
+
+/* GroupEnd */ 
+
+/* GroupBegin Subpage */
+
+/* GroupEnd */
+
+/* GroupBegin Subpage No Nav */
+
+/* GroupEnd */ 
+
+/* GroupBegin Navigation Styles */
+
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+
+/* GroupEnd */ 
+
+/* GroupBegin Channel Bar Dropdown Styles */
+   
+/* GroupEnd */
+
+/* ------------------------------------------------------------ */
+/* ---------- BEGIN 320+ ---------- */
+/* ------------------------------------------------------------ */                 
+                
+

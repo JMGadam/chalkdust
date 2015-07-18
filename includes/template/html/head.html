@@ -1,0 +1,292 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<!--DOC Google Font Link -->
+<!-- PLUGINS -->
+<script type="text/javascript" src="//extend.schoolwires.com/creative/scripts/creative/tools/head.min.js"></script>
+<!-- END PLUGINS -->
+<script type="text/javascript">
+	head.load([
+		{ rsMainMenu: "//extend.schoolwires.com/creative/scripts/creative/responsive/creative-responsive-menu-v2/creative.responsive.menu.v2.min.js" },
+		{ rsPagelistMenu: "//extend.schoolwires.com/creative/scripts/creative/responsive/creative-responsive-pagelist-menu-v2/creative.responsive.pagelist.menu.v2.min.js"},
+		{ mediaRotator: "//extend.schoolwires.com/creative/scripts/creative/rotate/cs.rs.multimedia.rotator.v2.min.js" }
+	]);
+	
+	$(window).load(function(){
+		calendarListView();
+	});
+	
+	$(function(){
+		$(window).bind("resize", function(){ jsMediaQueries(); calendarListView(); });
+		
+		head.ready("rsMainMenu", function(){
+			// RESPONSIVE MAIN MENU
+			$("body").csRsMenu({
+			        "breakPoint"            : 768, // SYSTEM BREAK POINTS - 768, 640, 480, 320
+			        "menuButtonParent"      : "#gb-channel-list",
+			        "showMenuBtnText"       : "yes",
+			        "menuBtnText"           : "MENU",
+			        "showSchools"           : "no",
+			        "showTranslate"         : "no",
+			        "translateId"           : "none",
+			        "showAccount"           : "yes",
+			        "extraMenuOptions"      : "", // EXTRA MENU HEADING NAMES SEPARATED BY A ;
+			        "extraMenuItems"        : "", // EXTRA MENU BUTTONS - STRUCTURE IS: MENU-OPTION-NUMBER, ITEM-NAME, ITEM-URL, ITEM-TARGET;
+			        "siteID"                : "[$SiteID$]"
+			});
+		});
+		
+		head.ready("rsPagelistMenu", function() {
+			// RESPONSIVE PAGELIST MENU
+			$("body").csRsPagelistMenu({
+			        "breakPoint"            : 480, // SYSTEM BREAK POINTS - 768, 640, 480, 320
+			        "menuButtonParent"      : "#sp-content",
+			        "showMenuBtnText"       : "yes",
+			        "menuBtnText"           : "PAGES",
+			        "siteID"                : "[$SiteID$]"
+			});
+		});
+		
+		jsMediaQueries();
+		useChannelForSection();
+		dynamicContent();
+		searchText();		
+	});	
+	
+	function jsMediaQueries(){
+		switch(csGetBreakPoint()) {
+			case "desktop": 
+				
+			break;
+			case "768":
+				
+			break;
+			case "640":
+				
+			break;
+			case "480":
+				
+			break;
+			case "320":
+				
+			break;
+		}
+	}
+	
+	function mediaRotator(){
+		head.ready("mediaRotator", function(){
+			if(!$("#sw-content-container10.region.ui-hp .rs-gallery-container").length){
+				// MULTIMEDIA ROTATOR
+				$("#sw-content-container10.ui-hp div.ui-widget.app.cs-rs-multimedia-rotator").csRsMultimediaRotator({
+					"imageWidth"              : 960,
+					"imageHeight"             : 405,
+					"appHeader"               : "no",
+					"titles"                  : "no",
+					"captions"                : "no",
+					"playPause"               : "no",
+					"mainControls"            : "no",
+					"contMoreLink"            : "no",
+					"contMoreLinkText"        : "Read More",
+					"descMoreLink"            : "no",
+					"descMoreLinkText"        : "Read More",
+					"bullets"                 : "no",
+					"bulletControls"          : "no",
+			 		"thumbnails"              : "no",
+					"thumbnailWidth"          : 122,
+					"thumbnailHeight"         : 53,
+					"thumbnailSlideDirection" : "horizontal", // horizontal or vertical
+					"hoverPause"              : "yes",
+			                "fullScreenRotator"       : "no", // image dimensions work well at 1500x915
+					"fullScreenVideo"         : "no",
+					"transitionType"          : "fade", // fade or slide
+					"transitionSpeed"         : 3,
+					"transitionDelay"         : 8,
+					"onImageLoad"             : function() { },
+					"allImagesLoaded"         : function() { },
+					"onThumbnailLoad"         : function() { },
+					"allThumbnailsLoaded"     : function() { },
+					"onTransitionStart"       : function() { },
+					"onTransitionEnd"         : function() { },
+					"watchVidClick"           : function() { },
+					"closeVidClick"           : function() { },
+					"allLoaded"               : function() { }
+				});
+			}
+		});
+	}
+	
+	function appView(){
+		//DOC make homepage apps collapsible for small mobile devices
+		if(!$("#hp-content div.ui-widget.app.active").length){
+			$("#hp-content div.ui-widget.app:first").addClass("active");
+		}
+		
+		//DOC dont add app into accordion if it doesnt have a header
+		$("#hp-content div.ui-widget.app").each(function() {
+			if($(".ui-widget-header", this).hasClass("ui-helper-hidden") || jQuery.trim($(".ui-widget-header h1", this).text()) == "") {
+				$(this).addClass("no-header");
+			}
+		});
+		
+		//DOC accordion header click
+		$("#hp-content div.ui-widget-header").click(function(){
+			var clickedApp = $(this).parent().parent().attr("id");
+			
+			$("#hp-content div.ui-widget.app").removeClass("active");
+			$(this).parent().addClass("active");
+			
+			$("html, body").animate({
+				scrollTop: $("#" + clickedApp).offset().top
+			}, 500, function(){
+				$("html, body").stop(true, false);
+			});
+		});
+	}	
+	
+	function useChannelForSection(){
+		//DOC use channel name for pagelistnavigation header if one is not present
+		if(!$("div.sp.column.one .ui-widget-header h1").length > 0) {
+			$("div.sp.column.one .ui-widget-header").append("<h1>[$ChannelName$]</h1>");
+		}
+        }
+        
+	function dynamicContent(){
+		// ********** MYSTART ********** //
+		//DOC replace mystart dropdown arrows
+		$(".sw-myaccount-chevron, .sw-dropdown-arrow").text("▼");
+
+
+		// ********** HEADER ********** //
+		//DOC add logo
+		var logoCheck = "<SWCtrl controlname="Custom" props="Name:showLogo" />";
+		var logoSrc = jQuery.trim("<SWCtrl controlname="Custom" props="Name:logoSrc" />");
+		if(logoCheck == "true") {
+			var srcSplit = logoSrc.split("/");
+			var srcSplitLen = srcSplit.length;
+			if((logoSrc != "") && (srcSplit[srcSplitLen - 1] != "default-man.jpg")) {
+				$("#gb-logo").append('<a href="/[$SITEALIAS$]" title="[$SiteName$]"><img src="' + logoSrc + '" alt="[$SiteName$]" /></a>').removeClass("hidden");
+			} else {
+				$("#gb-logo").append('<a href="/[$SITEALIAS$]" title="[$SiteName$]"><img src="/cms/lib3/SW00000036/Centricity/template/234/logos/fairbanks-logo.png" alt="[$SiteName$]" /></a>').removeClass("hidden");
+			}
+		}
+		
+		//DOC add sitename
+		var siteNameOne = jQuery.trim('<SWCtrl controlname="Custom" props="Name:siteNameOne" />');
+		var siteNameTwo = jQuery.trim('<SWCtrl controlname="Custom" props="Name:siteNameTwo" />');
+		if((siteNameOne == "") && (siteNameTwo == "")) {
+			var splitLen = 2;
+			var siteName = "[$SiteName$]";
+			siteName = siteName.split(" ");
+			var siteNameLength = siteName.length;
+			if(siteNameLength > 2){
+				siteNameEnd = jQuery.trim(siteName.splice(-splitLen, siteName.length).toString().replace(/,/g, " "));
+			} else {
+				siteNameEnd = jQuery.trim(siteName.splice(-1, siteName.length).toString().replace(/,/g, " "));
+			}
+			siteNameBegin = jQuery.trim(siteName.toString().replace(/,/g, " "));
+			$("#gb-sitename").prepend("<h1>" + siteNameBegin + "</h1><h2>" + siteNameEnd + "</h2>");
+		} else if((siteNameOne != "") && (siteNameTwo == "")) {
+			$("#gb-sitename").prepend("<h1>" + siteNameOne + "</h1>");
+		} else if((siteNameOne == "") && (siteNameTwo != "")) {
+			$("#gb-sitename").prepend("<h1>" + siteNameTwo + "</h1>");
+		} else if((siteNameOne != "") && (siteNameTwo != "")) {
+			$("#gb-sitename").prepend("<h1>" + siteNameOne + "</h1><h2>" + siteNameTwo + "</h2>");
+		}
+		
+		// ********** CHANNEL BAR ********** //
+		//DOC add first class to first channel item
+		$("li.sw-channel-item").first().addClass("first");
+		//DOC add last class to last channel item
+		$("li.sw-channel-item").last().addClass("last");
+		
+		// ********** BODY ********** //
+		//DOC rename first breadcrumb
+		$("li.ui-breadcrumb-first > a > span").text("Home");
+		//DOC replace more-link text
+		$("a.more-link span").text("More »");
+		//DOC auto-focus username signin field
+		$("#swsignin-txt-username").focus();
+		//DOC center signed out message and signin button
+        	if($("div.ui-spn > div > p > span").text() == "You have been signed out."){
+        		$("div.ui-spn > div").css({"text-align" : "center", "padding" : "50px 0px 50px 0px"});
+        		//DOC add signed out breadcrumb
+        		$(".ui-breadcrumbs").append("<li class='ui-breadcrumb-last'>Signed Out</li>");
+        	}
+        	//DOC add sign in breadcrumb
+        	if($("#swlogin").length){
+        		$(".ui-breadcrumbs").append("<li class='ui-breadcrumb-last'>Sign In</li>");
+        	}
+        	//DOC register breadcrumb
+		if($("#swageprompt-txt-birthmonth").length && $("#swageprompt-txt-birthday").length && $("#swageprompt-txt-birthyear").length) {
+			$(".ui-breadcrumbs").append("<li class='ui-breadcrumb-last'>Register</li>");
+		}
+		// DOC search results breadcrumb
+		if($("#sw-content-layout-wrapper.ui-spn #swsearch-pnl-main").length) {
+			$(".ui-breadcrumbs").append("<li class='ui-breadcrumb-last'>Search Results</li>");
+		}
+        	//DOC add read full story button to each headline
+        	$(".ui-widget.app.headlines").each(function(){
+        		$(".ui-article", this).each(function(){
+        			var headlineURL = $("h1 a", this).attr("href");
+        			$(".ui-article-description", this).append('<a class="custom-read-more" href="' + headlineURL + '">Read Full Story »</a>');
+        		});
+        	});
+        	// APPLY RESPONSIVE DIMENSIONS TO CONTENT IMAGES
+        	$("div.ui-widget.app .ui-widget-detail img")
+        		.not($("div.ui-widget.app.cs-rs-multimedia-rotator .ui-widget-detail img"))
+        		.not($("div.ui-widget.app.gallery.json .ui-widget-detail img"))
+        		.each(function() {
+        			if ($(this).attr('width') !== undefined && $(this).attr('height') !== undefined) { // IMAGE HAS INLINE DIMENSIONS
+					$(this).css({"display": "inline-block", "width": "100%", "max-width": $(this).attr("width") + "px", "height": "auto", "max-height": $(this).attr("height") + "px"});
+				}
+		});
+        	
+		
+		// ********** FOOTER ********** //
+		//DOC get Schoolwires footer links
+		$("a#feedback").text($("div#sw-footer-links li:eq(0) a").text()).attr("href", $("div#sw-footer-links li:eq(0) a").attr("href"));
+		$("a#terms").text($("div#sw-footer-links li:eq(2) a").text()).attr("href", $("div#sw-footer-links li:eq(2) a").attr("href"));
+		$("a#policy").text($("div#sw-footer-links li:eq(1) a").text()).attr("href", $("div#sw-footer-links li:eq(1) a").attr("href"));		
+	}
+	
+	function searchText() {
+		//DOC custom mystart search placeholder
+	        //SEARCH TEXT
+	        $("div#sw-mystart-search input#sw-search-input").removeAttr("placeholder");
+		$("div#sw-mystart-search input#sw-search-input").attr("value", "Search...");
+		$("div#sw-mystart-search input#sw-search-input").focus(function() {
+			if($(this).val() == "Search...") {
+				$(this).val("");
+			}
+		});
+		$("div#sw-mystart-search input#sw-search-input").blur(function() {
+			if($(this).val() == "") {
+				$(this).val("Search...");
+			}
+		});
+	}
+	
+	function calendarListView(){
+		//DOC auto click function for schoolwires calendar list view for small mobile devices
+		if(!$(".ui-widget.app.calendar #calendarlist-pnl-specialview.loaded").length){
+			$("a.ui-btn-toggle.list").click();
+			$("a.ui-btn-toggle.month").click();
+			$(".ui-widget.app.calendar #calendarlist-pnl-specialview").addClass("loaded");
+		}
+		
+		switch(csGetBreakPoint()) {
+			case "desktop": case "768": case "640":
+				$(".ui-widget.app.calendar #calendar").removeClass("ui-helper-hidden");
+				$(".ui-widget.app.calendar #calendarlist-pnl-specialview").addClass("ui-helper-hidden");
+			break;
+			case "480": case "320":
+				$(".ui-widget.app.calendar #calendar").addClass("ui-helper-hidden");
+				$(".ui-widget.app.calendar #calendarlist-pnl-specialview").removeClass("ui-helper-hidden");
+				$(".ui-btn-toggle.month").removeClass("active");
+				$(".ui-btn-toggle.list").addClass("active");
+			break;
+		}
+	}
+	
+	function csGetBreakPoint() {
+		return window.getComputedStyle(document.querySelector("body"), ":before").getPropertyValue("content").replace(/"|'/g, "");/*"*/
+	}
+</script>
