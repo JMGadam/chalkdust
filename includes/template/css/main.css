@@ -84,11 +84,19 @@ div.sw-special-mode-bar {
 	overflow: hidden;
 }
 #gb-header-outer {
-	position: relative;
+	position: fixed;
+	background: #7F1416;
+	height: 52px;
+	width: 100%;
+	top: 0px;
+	left: 0px;
 }
 #gb-header {
-	max-width: 960px;
+	max-width: 1280px;
 	margin: 0px auto;
+}
+#header-left {
+	float:left;
 }
 #gb-logo {
 	
@@ -97,8 +105,8 @@ div.sw-special-mode-bar {
 	max-width: 100%;
 	max-height: 100%;
 }
-#gb-channel-list-outer {
-	position: relative;
+#header-right {
+	float:right;
 }
 #gb-channel-list {
 	max-width: 960px;
@@ -106,7 +114,12 @@ div.sw-special-mode-bar {
 	margin: 0px auto;
 }
 #gb-footer-outer {
-	position: relative;
+	position: fixed;
+	height: 40px;
+	background: #7F1416;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
 }
 #gb-footer {
 	max-width: 960px;
@@ -299,11 +312,14 @@ ul.sw-channel-list li.sw-channel-item {
 	position: relative;
 }
 li.sw-channel-item > a {
-	color: #CCCCCC;
+	color: #FFF;
 	display: block;
 	height: 100%;
 	padding: 0 15px 0 0;
 	text-decoration: none;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	font-size: 16px;
 }
 li.sw-channel-item > a span {
 	display: block;
