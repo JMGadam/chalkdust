@@ -7,7 +7,7 @@ $headCode = file_get_contents('includes/template/html/head.html');
 
 $siteID = '4';
 $logoCheck = 'true';
-$logoSrc = 'http://swconsultant.schoolwires.net/cms/lib8/SW00000039/Centricity/Domain/4/Headlines-Icon-13.jpg';
+$logoSrc = 'http://swconsultant.schoolwires.net/cms/lib8/SW00000039/Centricity/Template/GlobalAssets/images//logos/kankakee-logo.png';
 $siteName = 'Kankakee School District 111';
 $siteNameOne = 'Kankakee';
 $siteNameTwo = 'School District 111';

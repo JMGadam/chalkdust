@@ -1,7 +1,7 @@
 <div id="gb-page" class="hp">
 	<div id="gb-header-outer">
 		<div id="gb-header" class="ui-clear">
-			<div id="header-left">
+			<div id="header-left" class="ui-clear">
 				<div id="gb-logo" class="hidden"></div>
 				<div id="gb-sitename"></div>
 			</div>
@@ -12,13 +12,47 @@
 			</div>
 		</div>
 	</div>
-	<div id="hp-slideshow-outer">
+	<!-- <div id="hp-slideshow-outer">
 		<div id="hp-slideshow">
 			[$ContentRegion props="ContainerNumber:10"$]
 		</div>
-	</div>
+	</div> -->
 	<div id="hp-content-outer">
 		<div id="hp-content" class="ui-clear">
+			<div id="hp-content-top" class="ui-clear">
+				<div id="hp-icons">
+					<a class="hp-icon menu">
+						<span class="icon-content">
+							<span class="icon-font">2</span>
+							<span class="icon-text">Menu</span>
+						</span>
+					</a>
+					<a class="hp-icon skyward">
+						<span class="icon-content">
+							<span class="icon-font">3</span>
+							<span class="icon-text">Menu</span>
+						</span>
+					</a>
+					<a class="hp-icon directory">
+						<span class="icon-content">
+							<span class="icon-font">4</span>
+							<span class="icon-text">Menu</span>
+						</span>
+					</a>
+					<a class="hp-icon news">
+						<span class="icon-content">
+							<span class="icon-font">5</span>
+							<span class="icon-text">Menu</span>
+						</span>
+					</a>
+					<a class="hp-icon briefcase">
+						<span class="icon-content">
+							<span class="icon-font">6</span>
+							<span class="icon-text">Menu</span>
+						</span>
+					</a>
+				</div>
+			</div>
 			<div class="hp column one">
 				[$ContentRegion props="ContainerNumber:1"$]
 			</div>
@@ -29,15 +63,42 @@
 			</div>
 		</div>
 	</div>
-	<div id="gb-footer-outer">
-		<div id="gb-footer" class="ui-clear">
-			<div class="gb footer one">
-				<p>[$SiteAddressOne$]</p>	
-				<p>[$SiteCity$], [$SiteState$] [$SiteZip$]</p>	
+	<div id="gb-footer-wrapper">
+		<div id="gb-footer-outer">
+			<div id="gb-footer" class="ui-clear">
+				<div class="gb footer one ui-clear">
+					<div id="chevron-toggle" class="icon-font">
+						<span class="closed">9</span>
+						<span class="opened">0</span>
+					</div>
+					<div class="mystart-link">
+						<a href="#">CONTACT US</a>
+					</div>
+					<div class="mystart-link">
+						<a href="#">DISTRICT HOME</a>
+					</div>
+					<div class="mystart-link">
+						<a href="#">LANGUAGE</a>
+					</div>
+					<div class="mystart-link">
+						<a href="#">SITEMAP</a>
+					</div>
+				</div>
+				<div class="gb footer two ui-clear">
+					
+				</div>
 			</div>
-			<div class="gb footer two">
-				<p>[$SiteContactPhone$]</p>
-				<p>[$SiteContactFax$]</p>
+		</div>
+		<div id="gb-footer-info-outer" class="ui-clear">
+			<div id="gb-footer-info" class="ui-clear">
+				<div class="gb footer-info one">
+					<p>[$SiteAddressOne$]</p>	
+					<p>[$SiteCity$], [$SiteState$] [$SiteZip$]</p>	
+				</div>
+				<div class="gb footer-info two">
+					<p>[$SiteContactPhone$]</p>
+					<p>[$SiteContactFax$]</p>
+				</div>
 			</div>
 		</div>
 	</div>

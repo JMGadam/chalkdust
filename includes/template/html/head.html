@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
 <!--DOC Google Font Link -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans' rel='stylesheet' type='text/css'>
 <!-- PLUGINS -->
 <script type="text/javascript" src="//extend.schoolwires.com/creative/scripts/creative/tools/head.min.js"></script>
 <!-- END PLUGINS -->
@@ -49,7 +49,8 @@
 		jsMediaQueries();
 		useChannelForSection();
 		dynamicContent();
-		searchText();		
+		searchText();
+		footerToggle();		
 	});	
 	
 	function jsMediaQueries(){
@@ -289,5 +290,12 @@
 	
 	function csGetBreakPoint() {
 		return window.getComputedStyle(document.querySelector("body"), ":before").getPropertyValue("content").replace(/"|'/g, "");/*"*/
+	}
+
+	function footerToggle(){
+		$("#chevron-toggle").click(function(){
+			$("#gb-footer-info-outer").slideToggle();
+			$(this).toggleClass("opened");
+		})
 	}
 </script>
