@@ -259,26 +259,6 @@ http://swconsultant.schoolwires.net/site/Default.aspx?PageID=2&amp;PageType=17&a
 </div>
 </li>
 <li>
-<div class="ui-article">
-     <h1 class="ui-article-title sw-calendar-block-date">July 28, 2015</h1>
-     <p class="ui-article-description">
-         <span class="sw-calendar-block-time">8:00 AM - 9:00 AM</span>
-         <span class="sw-calendar-block-title"><a href="
-http://swconsultant.schoolwires.net/site/Default.aspx?PageID=2&amp;PageType=17&amp;DomainID=4&amp;ModuleInstanceID=1&amp;EventDateID=298">Chest Day</a></span>
-     </p>
-</div>
-</li>
-<li>
-<div class="ui-article">
-     <h1 class="ui-article-title sw-calendar-block-date">July 31, 2015</h1>
-     <p class="ui-article-description">
-         <span class="sw-calendar-block-time">8:00 AM - 9:00 AM</span>
-         <span class="sw-calendar-block-title"><a href="
-http://swconsultant.schoolwires.net/site/Default.aspx?PageID=2&amp;PageType=17&amp;DomainID=4&amp;ModuleInstanceID=1&amp;EventDateID=507">TGIF Lunch</a></span>
-     </p>
-</div>
-</li>
-<li>
 <div class="ui-article last-article">
      <h1 class="ui-article-title sw-calendar-block-date">August 3, 2015</h1>
      <p class="ui-article-description">

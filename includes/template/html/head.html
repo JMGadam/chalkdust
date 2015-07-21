@@ -3,6 +3,7 @@
 <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans' rel='stylesheet' type='text/css'>
 <!-- PLUGINS -->
 <script type="text/javascript" src="//extend.schoolwires.com/creative/scripts/creative/tools/head.min.js"></script>
+<script type="text/javascript" src="//extend.schoolwires.com/creative/scripts/joel/mod-events/joel.mod-events.min.js"></script>
 <!-- END PLUGINS -->
 <script type="text/javascript">
 	head.load([
@@ -16,7 +17,15 @@
 	});
 	
 	$(function(){
-		$(window).bind("resize", function(){ jsMediaQueries(); calendarListView(); });
+
+		windowHeight = '';
+
+		$(window).bind("resize", function(){ 
+			jsMediaQueries();
+			calendarListView(); 
+			windowHeight = $(window).height(); 
+			hpHeight(); 
+		});
 		
 		head.ready("rsMainMenu", function(){
 			// RESPONSIVE MAIN MENU
@@ -50,7 +59,9 @@
 		useChannelForSection();
 		dynamicContent();
 		searchText();
-		footerToggle();		
+		hpHeight();
+		footerToggle();	
+		modEvents();	
 	});	
 	
 	function jsMediaQueries(){
@@ -190,7 +201,7 @@
 		} else if((siteNameOne == "") && (siteNameTwo != "")) {
 			$("#gb-sitename").prepend("<h1>" + siteNameTwo + "</h1>");
 		} else if((siteNameOne != "") && (siteNameTwo != "")) {
-			$("#gb-sitename").prepend("<h1>" + siteNameOne + "</h1><h2>" + siteNameTwo + "</h2>");
+			$("#gb-sitename").prepend("<div id='sitename-bg'><h1>" + siteNameOne + "</h1></div><h2>" + siteNameTwo + "</h2>");
 		}
 		
 		// ********** CHANNEL BAR ********** //
@@ -297,5 +308,32 @@
 			$("#gb-footer-info-outer").slideToggle();
 			$(this).toggleClass("opened");
 		})
+	}
+
+	function hpHeight(){
+		var windowHeight = $(window).height();
+		$('#hp-content').height(windowHeight - 88);
+	}
+
+	function modEvents(){
+	    if (!$(".upcomingevents .joel-month").length) {
+	        $(".upcomingevents").modEvents({
+	            columns     : "no",
+	            monthLong   : "yes",
+	            dayWeek     : "no"
+	        });
+	        eventsByDay(".upcomingevents .ui-articles");
+	    }
+	}
+
+	function eventsByDay(container) {
+	    var countLi = 0;
+	    $(".ui-article", container).each(function(){
+	        if (!$(this).find("h1.ui-article-title.sw-calendar-block-date").size()){
+	            var moveArticle = $(this).html();
+	            $(this).parent().prev().children().children().next().append(moveArticle);
+	            $(this).parent().remove();
+	        };
+	    });
 	}
 </script>
