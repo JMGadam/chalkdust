@@ -284,9 +284,78 @@ $regionTwoReplace = str_replace('[$ContentRegion props="ContainerNumber:2"$]', $
 
 $homePage = $regionTwoReplace;
 
+$myStart = '<div id="sw-mystart-outer" class="noprint">
+<div id="sw-mystart-inner">
+<div id="sw-mystart-left">
+<div class="sw-mystart-nav sw-mystart-button home"><a tabindex="0" href="http://swconsultant.schoolwires.net/Domain/4" alt="District Home" title="Return to the homepage on the district site."><span>District Home<div id="sw-home-icon"></div>
+</span></a></div>
+<div class="sw-mystart-nav sw-mystart-dropdown schoollist" tabindex="0">
+<div class="selector">Select a School...</div>
+<div class="sw-dropdown">
+<div class="sw-dropdown-selected">Select a School</div>
+<ul class="sw-dropdown-list">
+<li><a href="/Domain/8" tabindex="-1">JG Elementary</a></li>
+<li><a href="/Domain/9" tabindex="-1">Grannas Middle School</a></li>
+<li><a href="/Domain/10" tabindex="-1">Grannas High</a></li>
+<li><a href="/Domain/105" tabindex="-1">Hankerdoo Academy</a></li>
+<li><a href="/Domain/106" tabindex="-1">Baby Willie Elementary</a></li>
+<li><a href="/Domain/107" tabindex="-1">Supra Middle School</a></li>
+<li><a href="/Domain/108" tabindex="-1">Radnor Township</a></li>
+<li><a href="/Domain/109" tabindex="-1">Sub Site 8</a></li>
+<li><a href="/Domain/110" tabindex="-1">Sub Site 9</a></li>
+<li><a href="/Domain/111" tabindex="-1">Brandon O"neill</a></li>
+</ul>
+</div>
+<div class="sw-dropdown-arrow">▼</div>
+</div>
+</div>
+<div id="sw-mystart-right">
+<div id="ui-btn-signin" class="sw-mystart-button signin"><a href="http://swconsultant.schoolwires.net/site/Default.aspx?PageType=7&amp;SiteID=4&amp;IgnoreRedirect=true" title="Sign in to your website."><span>Sign In</span></a></div>
+<div id="ui-btn-register" class="sw-mystart-button register"><a href="http://swconsultant.schoolwires.net/site/Default.aspx?PageType=10&amp;SiteID=4" title="Register for this site."><span>Register</span></a></div>
+<div id="sw-mystart-search" class="sw-mystart-nav">
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#sw-search-input").keyup(function(e) {        if (e.keyCode == 13) {
+            SWGoToSearchResultsPageswsearchinput();
+        }
+    });
+    $("#sw-search-input").val($("#swsearch-hid-word").val())});
+function SWGoToSearchResultsPageswsearchinput() {
+window.location.href="http://swconsultant.schoolwires.net/site/Default.aspx?PageType=6&SiteID=4&SearchString=" + $("#sw-search-input").val();
+}
+</script>
+<input id="sw-search-input" type="text" title="Type the word to search for and click Search." value="Search...">
+<a tabindex="0" id="sw-search-button" onclick="SWGoToSearchResultsPageswsearchinput();"><span><img src="http://swconsultant.schoolwires.net/Static/V2_11_01//globalassets/images/sw-mystart-search.png" alt="Search"></span></a>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>';
+
+$swFooter = '<div id="sw-footer-outer">
+<div id="sw-footer-inner">
+<div id="sw-footer-left"></div>
+<div id="sw-footer-right">
+<div id="sw-footer-links">
+<ul>
+<li><a title="Click to email the primary contact" href="mailto:brenton.kelly@schoolwires.com">Questions or Feedback?</a> | </li>
+<li><a href="http://www.schoolwires.com/privacy" target="_blank">Blackboard Schoolwires Privacy Policy (Updated)</a> | </li>
+<li><a href="http://www.schoolwires.com/terms" target="_blank">Terms of Use</a></li>
+</ul>
+</div>
+<div id="sw-footer-copyright">Copyright © 2002-2015 Blackboard, Inc. All rights reserved.</div>
+<div id="sw-footer-logo"><a href="http://www.schoolwires.com" title="This site is powered by Schoolwires.">
+<img src="http://swconsultant.schoolwires.net/Static/V2_11_01//GlobalAssets/Images/sw-footer-logo.png" alt="Powered by Schoolwires logo">
+</a></div>
+</div>
+</div>
+</div>';
+
 print $headContent;
 print "</head><body>";
+print $myStart;
 print $homePage;
+print $swFooter;
 
 include("includes/end-page.html");
 

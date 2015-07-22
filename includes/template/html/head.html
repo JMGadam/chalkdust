@@ -62,7 +62,8 @@
 		searchText();
 		hpHeight();
 		footerToggle();	
-		modEvents();	
+		modEvents();
+		schoolsToChannelBar();	
 	});	
 	
 	function jsMediaQueries(){
@@ -166,6 +167,7 @@
 		// ********** MYSTART ********** //
 		//DOC replace mystart dropdown arrows
 		$(".sw-myaccount-chevron, .sw-dropdown-arrow").text("▼");
+		$("#sw-mystart-right").appendTo(".gb.footer.two");
 
 
 		// ********** HEADER ********** //
@@ -240,7 +242,7 @@
         	$(".ui-widget.app.headlines").each(function(){
         		$(".ui-article", this).each(function(){
         			var headlineURL = $("h1 a", this).attr("href");
-        			$(".ui-article-description", this).append('<a class="custom-read-more" href="' + headlineURL + '">MORE INFO</a>');
+        			$(".ui-article-description", this).append('<a class="custom-more-info" href="' + headlineURL + '">MORE INFO</a>');
         		});
         	});
         	// APPLY RESPONSIVE DIMENSIONS TO CONTENT IMAGES
@@ -260,7 +262,8 @@
 		//DOC get Schoolwires footer links
 		$("a#feedback").text($("div#sw-footer-links li:eq(0) a").text()).attr("href", $("div#sw-footer-links li:eq(0) a").attr("href"));
 		$("a#terms").text($("div#sw-footer-links li:eq(2) a").text()).attr("href", $("div#sw-footer-links li:eq(2) a").attr("href"));
-		$("a#policy").text($("div#sw-footer-links li:eq(1) a").text()).attr("href", $("div#sw-footer-links li:eq(1) a").attr("href"));		
+		$("a#policy").text("Privacy Policy").attr("href", $("div#sw-footer-links li:eq(1) a").attr("href"));	
+		$("#sw-footer-logo").appendTo(".gb.footer-info.two");	
 	}
 	
 	function searchText() {
@@ -307,15 +310,15 @@
 	}
 
 	function footerToggle(){
-		$("#chevron-toggle").click(function(){
+		$(".toggle-info").click(function(){
 			$("#gb-footer-info-outer").slideToggle();
-			$(this).toggleClass("opened");
+			$("#chevron-toggle").toggleClass("opened");
 		})
 	}
 
 	function hpHeight(){
 		var windowHeight = $(window).height();
-		$('#hp-content').height(windowHeight - 88);
+		$('#hp-content .inner').height(windowHeight - 88);
 	}
 
 	function modEvents(){
@@ -352,18 +355,28 @@
 				var index = 0;
 				$("li", this).eq(index).addClass("active");
 				$(".active", this).animate({ opacity: 1 }, 1500, function() { setTimeout(function () { rotateHeadlines(); }, 8000); });
+				var moreInfoURL = $("li.active .custom-more-info", this).attr("href");
+					$("#more-info").attr("href", moreInfoURL);
 			} else {
 				var index = $(".active", this).index();
 				$(".active", this).animate({ opacity: 0 }, 1500, function() { }); 
 				$(".active", this).removeClass("active");
 				if(index == $("li", this).length-1) {
 					$("li", this).eq(0).addClass("active");
+					var moreInfoURL = $("li.active .custom-more-info", this).attr("href");
+					$("#more-info").attr("href", moreInfoURL);
 				}
 				else {
 					$("li", this).eq(index).next("li").addClass("active");
+					var moreInfoURL = $("li.active .custom-more-info", this).attr("href");
+					$("#more-info").attr("href", moreInfoURL);
 				}
 				$(".active", this).animate({ opacity: 1 }, 1500, function() { setTimeout(function () { rotateHeadlines(); }, 8000); });
 			}
 		});
+	}
+
+	function schoolsToChannelBar(){
+		$(".sw-channel-item.last").after("<li class='sw-channel-item'><a style='padding-right:0px;'><span>SCHOOLS</span></a></li>");
 	}
 </script>

@@ -7,6 +7,16 @@
 #sw-mystart-outer {
 	display: none;
 }
+#sw-mystart-search {
+	display: none;
+}
+#sw-mystart-right {
+	position: relative;
+	right:auto;
+	top:auto;
+	text-align: left;
+	float:right;
+}
 #sw-myaccount-list {
 	top: 100%;
 }
@@ -126,6 +136,10 @@ div.sw-special-mode-bar {
 	max-width: 1280px;
 	margin: 0px auto;
 }
+.inner {
+	padding:0px 25px
+;position: relative;
+}
 #header-left {
 	float:left;
 	position: relative;
@@ -233,16 +247,58 @@ div.sw-special-mode-bar {
 	display: none;
 }
 #gb-footer-info-outer {
-	background:#000;
+	background: rgba(0,0,0,.90);
 	display: none;
+}
+#gb-footer-info {
+	max-width:1280px;
+	margin:0px auto;
 }
 .gb.footer-info.one {
 	width: 50%;
 	float: left;	
+	color: #fff;
+	position: relative;
+}
+.gb.footer-info.one p {
+	padding-left: 35px;
+}
+#map-marker {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    font-size: 27px;
+    /* text-align: left; */
+}
+.middot {
+	padding: 0px 6px;
+	font-size:15px;
+	font-weight: 800;
 }
 .gb.footer-info.two {
 	width: 50%;
 	float: left;	
+	opacity: .35;
+	padding-top: 15px;
+}
+#sw-footer-logo {
+	position: relative;
+	top:auto;
+	right:auto;
+	float:right;
+}
+#sw-links {
+	float:right;
+	padding: 15px 0px 0px 5px;
+}
+.sw-footer-link {
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #fff;
+	padding: 0px 5px;
+	border-radius: 2px;
+	font-family: 'Arial', sans-serif;
+	font-size: 11px;
 }
 #social-icons {
 	float:right;
@@ -351,8 +407,8 @@ a.more-link {
 .hp .view-calendar-link, #view-all-headlines, #more-info {
 	color:#fff;
 	border: 1px solid #fff;
-	padding: 5px 10px;
-	border-radius: 4px;
+	padding: 8px 10px;
+	border-radius: 3px;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 14px;
@@ -360,6 +416,12 @@ a.more-link {
 #view-all-headlines {
 	margin-top:30px;
 	display: inline-block;
+}
+#more-info {
+	background:#7F1416;
+	margin-right: 10px;
+	border-color: #7F1416;
+	box-shadow: 0px 0px 5px -1px #000;
 }
 .hp .view-calendar-link:hover {
 	background:#fff;
@@ -417,7 +479,7 @@ a.more-link {
 #hp-content {
 	max-width: 1280px;
 	margin: 0px auto;
-	position: relative;
+	/* position: relative; */
 }
 #hp-icons {
     float: right;
@@ -503,8 +565,9 @@ a.more-link {
     position: absolute;
 	
     bottom: 151px;
-    width: 100%;
-    left: 0px;
+    /* width: 100%; */
+    left: 25px;
+    right: 25px;
 }
 .hp.column.one {
 	width: 50%;
@@ -518,7 +581,7 @@ a.more-link {
 #hp-tagline {
     position: absolute;
     bottom: 25px;
-    left: 0px;
+    left: 25px;
     color: #fff;
     font-style: italic;
     text-shadow: 1px 1px #000;

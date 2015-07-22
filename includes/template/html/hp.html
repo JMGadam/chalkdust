@@ -1,13 +1,15 @@
 <div id="gb-page" class="hp">
 	<div id="gb-header-outer">
-		<div id="gb-header" class="ui-clear">
-			<div id="header-left" class="ui-clear">
-				<div id="gb-logo" class="hidden"></div>
-				<div id="gb-sitename"></div>
-			</div>
-			<div id="header-right">
-				<div id="gb-channel-list">
-					[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]
+		<div id="gb-header">
+			<div class="inner ui-clear">
+				<div id="header-left" class="ui-clear">
+					<div id="gb-logo" class="hidden"></div>
+					<div id="gb-sitename"></div>
+				</div>
+				<div id="header-right">
+					<div id="gb-channel-list">
+						[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]
+					</div>
 				</div>
 			</div>
 		</div>
@@ -18,112 +20,122 @@
 		</div>
 	</div> -->
 	<div id="hp-content-outer">
-		<div id="hp-content" class="ui-clear">
-			<div id="hp-content-top" class="ui-clear">
-				<div id="hp-icons">
-					<a class="hp-icon menu">
-						<span class="icon-content">
-							<span class="icon-font">2</span>
-							<span class="icon-text">Menu</span>
-						</span>
-					</a>
-					<a class="hp-icon skyward">
-						<span class="icon-content">
-							<span class="icon-font">3</span>
-							<span class="icon-text">Menu</span>
-						</span>
-					</a>
-					<a class="hp-icon directory">
-						<span class="icon-content">
-							<span class="icon-font">4</span>
-							<span class="icon-text">Menu</span>
-						</span>
-					</a>
-					<a class="hp-icon news">
-						<span class="icon-content">
-							<span class="icon-font">5</span>
-							<span class="icon-text">Menu</span>
-						</span>
-					</a>
-					<a class="hp-icon briefcase">
-						<span class="icon-content">
-							<span class="icon-font">6</span>
-							<span class="icon-text">Menu</span>
-						</span>
-					</a>
+		<div id="hp-content">
+			<div class="inner">
+				<div id="hp-content-top" class="ui-clear">
+					<div id="hp-icons">
+						<a class="hp-icon menu">
+							<span class="icon-content">
+								<span class="icon-font">2</span>
+								<span class="icon-text">Menu</span>
+							</span>
+						</a>
+						<a class="hp-icon skyward">
+							<span class="icon-content">
+								<span class="icon-font">3</span>
+								<span class="icon-text">Menu</span>
+							</span>
+						</a>
+						<a class="hp-icon directory">
+							<span class="icon-content">
+								<span class="icon-font">4</span>
+								<span class="icon-text">Menu</span>
+							</span>
+						</a>
+						<a class="hp-icon news">
+							<span class="icon-content">
+								<span class="icon-font">5</span>
+								<span class="icon-text">Menu</span>
+							</span>
+						</a>
+						<a class="hp-icon briefcase">
+							<span class="icon-content">
+								<span class="icon-font">6</span>
+								<span class="icon-text">Menu</span>
+							</span>
+						</a>
+					</div>
 				</div>
-			</div>
-			<div id="hp-content-bottom" class="ui-clear">
-				<div class="hp column one">
-					[$ContentRegion props="ContainerNumber:1"$]
-					<a id="more-info">MORE INFO</a><a id="view-all-headlines">VIEW ALL HEADLINES</a>
+				<div id="hp-content-bottom" class="ui-clear">
+					<div class="hp column one">
+						[$ContentRegion props="ContainerNumber:1"$]
+						<a id="more-info">MORE INFO</a><a id="view-all-headlines">VIEW ALL HEADLINES</a>
+					</div>
+					<div class="hp column two">
+						[$ContentRegion props="ContainerNumber:2"$]
+					</div>
 				</div>
-				<div class="hp column two">
-					[$ContentRegion props="ContainerNumber:2"$]
+				<div id="hp-tagline" class="ui-clear">
+					<div id="tagline-text">
+						<span class="large-text">ONE</span> Community, <span class="large-text">ONE</span> District, <span class="large-text">ONE</span> Vision, for <span class="large-text">All Children</span>
+					</div>
+					<a id="tagline-button"></a>
 				</div>
-			</div>
-			<div id="hp-tagline" class="ui-clear">
-				<div id="tagline-text">
-					<span class="large-text">ONE</span> Community, <span class="large-text">ONE</span> District, <span class="large-text">ONE</span> Vision, for <span class="large-text">All Children</span>
-				</div>
-				<a id="tagline-button"></a>
 			</div>
 		</div>
 	</div>
 	<div id="gb-footer-wrapper">
 		<div id="gb-footer-outer">
-			<div id="gb-footer" class="ui-clear">
-				<div class="gb footer one ui-clear">
-					<div id="chevron-toggle" class="icon-font">
-						<span class="closed">9</span>
-						<span class="opened">0</span>
+			<div id="gb-footer">
+				<div class="inner ui-clear">
+					<div class="gb footer one ui-clear">
+						<div id="chevron-toggle" class="icon-font toggle-info">
+							<span class="closed">9</span>
+							<span class="opened">0</span>
+						</div>
+						<div class="mystart-link toggle-info">
+							<a href="#">CONTACT US</a>
+						</div>
+						<div class="mystart-link">
+							<a href="#">DISTRICT HOME</a>
+						</div>
+						<div class="mystart-link">
+							<a href="#">LANGUAGE</a>
+						</div>
+						<div class="mystart-link">
+							<a href="#">SITEMAP</a>
+						</div>
 					</div>
-					<div class="mystart-link">
-						<a href="#">CONTACT US</a>
-					</div>
-					<div class="mystart-link">
-						<a href="#">DISTRICT HOME</a>
-					</div>
-					<div class="mystart-link">
-						<a href="#">LANGUAGE</a>
-					</div>
-					<div class="mystart-link">
-						<a href="#">SITEMAP</a>
-					</div>
-				</div>
-				<div class="gb footer two ui-clear">
-					<div id="social-icons" class="ui-clear">
-						<a class="sc-ico fb">
-							<img src="img/icon-facebook.png"/>
-						</a>
-						<a class="sc-ico fb">
-							<img src="img/icon-twitter.png"/>
-						</a>
-						<a class="sc-ico fb">
-							<img src="img/icon-instagram.png"/>
-						</a>
-						<a class="sc-ico fb">
-							<img src="img/icon-pinterest.png"/>
-						</a>
-						<a class="sc-ico fb">
-							<img src="img/icon-youtube.png"/>
-						</a>
-						<a class="sc-ico fb">
-							<img src="img/icon-vimeo.png"/>
-						</a>
+					<div class="gb footer two ui-clear">
+						<div id="social-icons" class="ui-clear">
+							<a class="sc-ico fb">
+								<img src="img/icon-facebook.png"/>
+							</a>
+							<a class="sc-ico fb">
+								<img src="img/icon-twitter.png"/>
+							</a>
+							<a class="sc-ico fb">
+								<img src="img/icon-instagram.png"/>
+							</a>
+							<a class="sc-ico fb">
+								<img src="img/icon-pinterest.png"/>
+							</a>
+							<a class="sc-ico fb">
+								<img src="img/icon-youtube.png"/>
+							</a>
+							<a class="sc-ico fb">
+								<img src="img/icon-vimeo.png"/>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="gb-footer-info-outer" class="ui-clear">
-			<div id="gb-footer-info" class="ui-clear">
-				<div class="gb footer-info one">
-					<p>[$SiteAddressOne$]</p>	
-					<p>[$SiteCity$], [$SiteState$] [$SiteZip$]</p>	
-				</div>
-				<div class="gb footer-info two">
-					<p>[$SiteContactPhone$]</p>
-					<p>[$SiteContactFax$]</p>
+		<div id="gb-footer-info-outer">
+			<div id="gb-footer-info">
+				<div class="inner ui-clear">
+					<div class="gb footer-info one">
+						<div id="map-marker" class="icon-font">-</div>
+						<p>[$SiteName$]<span class="middot">·</span>[$SiteAddressOne$]<span class="middot">·</span>[$SiteCity$], [$SiteState$] [$SiteZip$]</p>
+						<p>[$SiteContactPhone$] <span id="fax-title">Fax:</span> [$SiteContactFax$]</p>	
+					</div>
+					<div class="gb footer-info two ui-clear">
+						<div id="sw-links">
+							<a id="feedback" class="sw-footer-link"></a>
+							<a id="policy" class="sw-footer-link"></a>
+							<a id="terms" class="sw-footer-link"></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
