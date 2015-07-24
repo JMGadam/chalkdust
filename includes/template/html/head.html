@@ -64,6 +64,7 @@
 		footerToggle();	
 		modEvents();
 		schoolsToChannelBar();	
+		addFramesetTranslate();	
 	});	
 	
 	function jsMediaQueries(){
@@ -264,6 +265,8 @@
 		$("a#terms").text($("div#sw-footer-links li:eq(2) a").text()).attr("href", $("div#sw-footer-links li:eq(2) a").attr("href"));
 		$("a#policy").text("Privacy Policy").attr("href", $("div#sw-footer-links li:eq(1) a").attr("href"));	
 		$("#sw-footer-logo").appendTo(".gb.footer-info.two");	
+
+		$(".hp.column.one").height($("#hp-content-bottom").height());
 	}
 	
 	function searchText() {
@@ -378,5 +381,67 @@
 
 	function schoolsToChannelBar(){
 		$(".sw-channel-item.last").after("<li class='sw-channel-item'><a style='padding-right:0px;'><span>SCHOOLS</span></a></li>");
+	}
+
+	function addFramesetTranslate() {
+		var pageURL = window.location.href;
+		var translateDropdown = '<div class="sw-mystart-dropdown translate">' +
+						'<span class="before"></span>' +
+						'<div class="selector">LANGUAGE</div>' +
+						'<div class="sw-dropdown" style="display: none;">' +
+							'<ul class="sw-dropdown-list">' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|es&hl=en&anno=0&ie=UTF8">English to Spanish</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ar&hl=en&anno=0&ie=UTF8">English to Arabic</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|zh-CN&hl=en&anno=0&ie=UTF8">English to Chinese (Simplified)</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|zh-TW&hl=en&anno=0&ie=UTF8">English to Chinese (Traditional)</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|fr&hl=en&anno=0&ie=UTF8">English to French</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|de&hl=en&anno=0&ie=UTF8">English to German</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|it&hl=en&anno=0&ie=UTF8">English to Italian</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ja&hl=en&anno=0&ie=UTF8">English to Japanese</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ko&hl=en&anno=0&ie=UTF8">English to Korean</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|pt&hl=en&anno=0&ie=UTF8">English to Portuguese</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ru&hl=en&anno=0&ie=UTF8">English to Russian</a>' +
+								'</li>' +
+							'</ul>' +
+						'</div>' +
+					'</div>';
+		var pageHost = window.location.host;
+		if(pageHost != "translate.googleusercontent.com")
+		{				
+			$(".sw-mystart-button.sitemap").before(translateDropdown);
+			$(".sw-mystart-dropdown.translate").click(function()
+			{
+				$(".sw-dropdown",this).show();
+			});
+			$(".sw-mystart-dropdown.translate").hover(function()
+			{
+			},
+			function()
+			{
+				$(".sw-dropdown",this).hide();
+			});
+		}
+		
 	}
 </script>

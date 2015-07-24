@@ -58,8 +58,10 @@
 				</div>
 				<div id="hp-content-bottom" class="ui-clear">
 					<div class="hp column one">
-						[$ContentRegion props="ContainerNumber:1"$]
-						<a id="more-info">MORE INFO</a><a id="view-all-headlines">VIEW ALL HEADLINES</a>
+						<div id="headlines-wrapper">
+							[$ContentRegion props="ContainerNumber:1"$]
+							<a id="more-info">MORE INFO</a><a id="view-all-headlines">VIEW ALL HEADLINES</a>
+						</div>
 					</div>
 					<div class="hp column two">
 						[$ContentRegion props="ContainerNumber:2"$]
@@ -83,17 +85,14 @@
 							<span class="closed">9</span>
 							<span class="opened">0</span>
 						</div>
-						<div class="mystart-link toggle-info">
-							<a href="#">CONTACT US</a>
+						<div class="sw-mystart-button toggle-info">
+							<a href="#"><span>CONTACT US</span></a>
 						</div>
-						<div class="mystart-link">
-							<a href="#">DISTRICT HOME</a>
+						<div class="sw-mystart-button">
+							<a href="#"><span>DISTRICT HOME</span></a>
 						</div>
-						<div class="mystart-link">
-							<a href="#">LANGUAGE</a>
-						</div>
-						<div class="mystart-link">
-							<a href="#">SITEMAP</a>
+						<div class="sw-mystart-button sitemap">
+							<a href="#"><span>SITEMAP</span></a>
 						</div>
 					</div>
 					<div class="gb footer two ui-clear">
