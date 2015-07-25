@@ -63,6 +63,7 @@
 		hpHeight();
 		footerToggle();	
 		modEvents();
+		channelBarHover();
 		schoolsToChannelBar();	
 		addFramesetTranslate();	
 	});	
@@ -179,9 +180,9 @@
 			var srcSplit = logoSrc.split("/");
 			var srcSplitLen = srcSplit.length;
 			if((logoSrc != "") && (srcSplit[srcSplitLen - 1] != "default-man.jpg")) {
-				$("#gb-logo").append('<a href="/[$SITEALIAS$]" title="[$SiteName$]"><img src="' + logoSrc + '" alt="[$SiteName$]" /></a>').removeClass("hidden");
+				$(".gb-logo").append('<a href="/[$SITEALIAS$]" title="[$SiteName$]"><img src="' + logoSrc + '" alt="[$SiteName$]" /></a>').removeClass("hidden");
 			} else {
-				$("#gb-logo").append('<a href="/[$SITEALIAS$]" title="[$SiteName$]"><img src="/cms/lib3/SW00000036/Centricity/template/234/logos/fairbanks-logo.png" alt="[$SiteName$]" /></a>').removeClass("hidden");
+				$(".gb-logo").append('<a href="/[$SITEALIAS$]" title="[$SiteName$]"><img src="/cms/lib3/SW00000036/Centricity/template/234/logos/fairbanks-logo.png" alt="[$SiteName$]" /></a>').removeClass("hidden");
 			}
 		}
 		
@@ -199,13 +200,13 @@
 				siteNameEnd = jQuery.trim(siteName.splice(-1, siteName.length).toString().replace(/,/g, " "));
 			}
 			siteNameBegin = jQuery.trim(siteName.toString().replace(/,/g, " "));
-			$("#gb-sitename").prepend("<h1>" + siteNameBegin + "</h1><h2>" + siteNameEnd + "</h2>");
+			$(".gb-sitename").prepend("<h1>" + siteNameBegin + "</h1><h2>" + siteNameEnd + "</h2>");
 		} else if((siteNameOne != "") && (siteNameTwo == "")) {
-			$("#gb-sitename").prepend("<h1>" + siteNameOne + "</h1>");
+			$(".gb-sitename").prepend("<h1>" + siteNameOne + "</h1>");
 		} else if((siteNameOne == "") && (siteNameTwo != "")) {
-			$("#gb-sitename").prepend("<h1>" + siteNameTwo + "</h1>");
+			$(".gb-sitename").prepend("<h1>" + siteNameTwo + "</h1>");
 		} else if((siteNameOne != "") && (siteNameTwo != "")) {
-			$("#gb-sitename").prepend("<div id='sitename-bg'><h1>" + siteNameOne + "</h1></div><h2>" + siteNameTwo + "</h2>");
+			$(".gb-sitename").prepend("<div class='sitename-bg'><h1>" + siteNameOne + "</h1></div><h2>" + siteNameTwo + "</h2>");
 		}
 		
 		// ********** CHANNEL BAR ********** //
@@ -316,7 +317,15 @@
 		$(".toggle-info").click(function(){
 			$("#gb-footer-info-outer").slideToggle();
 			$("#chevron-toggle").toggleClass("opened");
-		})
+		});
+		// Hide the footer if a click occurs anywhere outside of it.
+		// if($("#chevron-toggle").hasClass("opened")){
+		// 	$(document).on('click', function(event) {
+		// 		if (!$(event.target).closest('#gb-footer-info-outer').length) {
+		// 			$("#gb-footer-info-outer").slideToggle();
+		// 		}
+		// 	});
+		// }
 	}
 
 	function hpHeight(){
@@ -381,6 +390,17 @@
 
 	function schoolsToChannelBar(){
 		$(".sw-channel-item.last").after("<li class='sw-channel-item'><a style='padding-right:0px;'><span>SCHOOLS</span></a></li>");
+	}
+
+	function channelBarHover(){
+		$("#sw-channel-list-container").mouseover(function(){
+			$("#large-logo").hide();
+			$("#small-logo").show();
+		});
+		$("#sw-channel-list-container").mouseout(function(){
+			$("#small-logo").hide();
+			$("#large-logo").show();
+		});
 	}
 
 	function addFramesetTranslate() {

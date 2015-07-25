@@ -23,7 +23,7 @@ $siteNameTwoReplace = str_replace('<SWCtrl controlname="Custom" props="Name:site
 $headContent = $siteNameTwoReplace;
 
 
-$hpCode = file_get_contents('includes/template/html/hp.html');
+$spCode = file_get_contents('includes/template/html/sp.html');
 
 $channelBar = '<div id="sw-channel-list-container">
 <ul id="channel-navigation" class="sw-channel-list" role="menubar">
@@ -331,11 +331,11 @@ http://swconsultant.schoolwires.net/site/Default.aspx?PageID=2&amp;PageType=17&a
 </div>
 </div>';
 
-$channelBarReplace = str_replace('[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]', $channelBar, $hpCode);
+$channelBarReplace = str_replace('[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]', $channelBar, $spCode);
 $regionOneReplace = str_replace('[$ContentRegion props="ContainerNumber:1"$]', $regionOne, $channelBarReplace);
 $regionTwoReplace = str_replace('[$ContentRegion props="ContainerNumber:2"$]', $regionTwo, $regionOneReplace);
 
-$homePage = $regionTwoReplace;
+$subPage = $regionTwoReplace;
 
 $myStart = '<div id="sw-mystart-outer" class="noprint">
 <div id="sw-mystart-inner">
@@ -407,7 +407,7 @@ $swFooter = '<div id="sw-footer-outer">
 print $headContent;
 print "</head><body>";
 print $myStart;
-print $homePage;
+print $subPage;
 print $swFooter;
 
 include("includes/end-page.html");
