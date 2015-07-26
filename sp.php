@@ -347,6 +347,11 @@ Adam</h1>
 <a href="/Page/333">
 <span>Nested Page</span>
 </a>
+</li>
+<li id="pagenavigation-333" class="active"><div class="bullet"></div>
+<a href="/Page/333">
+<span>Nested Page 2</span>
+</a>
 </li></ul>
 </li>
 <li id="pagenavigation-334" class=""><div class="bullet"></div>
