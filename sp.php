@@ -331,11 +331,195 @@ http://swconsultant.schoolwires.net/site/Default.aspx?PageID=2&amp;PageType=17&a
 </div>
 </div>';
 
-$channelBarReplace = str_replace('[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]', $channelBar, $spCode);
-$regionOneReplace = str_replace('[$ContentRegion props="ContainerNumber:1"$]', $regionOne, $channelBarReplace);
-$regionTwoReplace = str_replace('[$ContentRegion props="ContainerNumber:2"$]', $regionTwo, $regionOneReplace);
+$leftNav = '<div class="ui-widget app navigation pagenavigation">
+<div class="ui-widget-header">
+<h1>
+Adam</h1>
+</div>
+<div class="ui-widget-detail">
+<ul class="page-navigation">
+<li id="pagenavigation-332" class="collapsible"><div class="bullet collapsible"></div>
+<a href="/Page/332" class="">
+<span>Test Page</span>
+</a>
+<ul style="display: block;">
+<li id="pagenavigation-333" class="active"><div class="bullet"></div>
+<a href="/Page/333">
+<span>Nested Page</span>
+</a>
+</li></ul>
+</li>
+<li id="pagenavigation-334" class=""><div class="bullet"></div>
+<a href="/Page/334">
+<span>About</span>
+</a>
+</li>
+<li id="pagenavigation-335" class=""><div class="bullet"></div>
+<a href="/Page/335">
+<span>Jen</span>
+</a>
+</li>
+<li id="pagenavigation-336" class=""><div class="bullet"></div>
+<a href="/Page/336">
+<span>Calendar</span>
+</a>
+</li>
+<li id="pagenavigation-337" class=""><div class="bullet"></div>
+<a href="/Page/337">
+<span>Iron Man</span>
+</a>
+</li></ul>
+</div>
+<div class="ui-widget-footer">
+</div>
+</div>';
 
-$subPage = $regionTwoReplace;
+$contentRegion = '<div id="sw-content-layout-wrapper" class="ui-sp ui-print"><div id="sw-content-layout4"><div id="sw-content-container1" class="ui-column-one-half region"><div id="pmi-345">
+
+
+
+<div id="sw-module-3460">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = "173";
+            var PageID = "333";
+            var RenderLoc = "0";
+            var MIID = "346";
+
+            //added to check to make sure moderated content doesn"t bleed through the dialog
+            if ($("#dialog-overlay-WindowLargeModal-body.moderateContent").length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript("ModuleView");CheckScript("Mustache");
+ });</script>
+    
+    <div id="module-content-346">
+<div class="ui-widget app flexpage">
+	<div class="ui-widget-header ui-helper-hidden">
+		
+	</div>
+	
+	<div class="ui-widget-detail">
+		
+<div class="ui-article"><span style="display: block; text-align: right;"><a class="ui-btn-euedit" id="_imgSwitch0" href="javascript:I_EditToggle("_spanEdit0","editable-345-1","_imgSwitch0","editable-345-1_")" onclick="AddAnalyticsEvent("App", "Edit", "Inline Edit"); blur();" style="text-decoration:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span><span id="_spanEdit0" style="display: none;"><iframe id="__div0" frameborder="0" style="width: 100%; border: 1px solid rgb(227, 227, 227);"></iframe><br><a id="__div0src" href="javascript:I_ViewHTML("__div0")" style="font-size: 10px;">View HTML</a><textarea id="editable-345-1_" name="editable-345-1_" style="width: 100%; display: none;" class="editThis"></textarea></span><span class="editThis" id="editable-345-1" datafield="Data" pageid="333" recordid="126">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</span></div> 
+<div class="clear"></div>
+	
+	</div>
+	<div class="ui-widget-footer">
+		
+			
+		
+		<div class="clear"></div>
+	</div>
+</div>
+<input type="hidden" id="hidFullPath" value="http://swconsultant.schoolwires.net/">
+<input type="hidden" id="hidModuleInstanceID0" value="346">
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($("#hid-"+MIID+"-SidebarListView").length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent("http://swconsultant.schoolwires.net//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=173&PageID=333&ModuleInstanceID=" + MIID + "&PageModuleInstanceID=" + PMI + "&RenderLoc=0&FromRenderLoc=0&GroupYear=" + groupYear + "&GroupMonth=" + groupMonth + "&GroupByField=" + groupBy + "&EnableQuirksMode=0&ViewID=" + viewToUse + "&Tag=" + tag, container, 2, "chkSidebar();");
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $("#hid-"+MIID+"-DetailView").val();
+   }
+  GetContent("http://swconsultant.schoolwires.net//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=173&PageID=333&ModuleInstanceID=" + MIID + "&PageModuleInstanceID=" + PMI + "&FlexDataID=" + flexDataID + "&GroupYear=" + groupYear + "&GroupMonth=" + groupMonth + "&GroupByField=" + groupBy + "&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=" + tag + "&ViewID=" + targetView, container, 2, "chkSidebar();");
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($("#hid-"+MIID+"-SidebarListView").length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent("http://swconsultant.schoolwires.net//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=173&PageID=333&ModuleInstanceID=" + MIID + "&PageModuleInstanceID=" + PMI + "&RenderLoc=0&FromRenderLoc=0&Tag=" + tag + "&EnableQuirksMode=0&ViewID="+viewToUse, container, 2, "chkSidebar();");
+}
+</script>
+</div>
+
+</div></div>
+</div><div id="sw-content-container2" class="ui-column-one-half region"><div id="pmi-346">
+
+
+
+<div id="sw-module-3470">    
+    <div id="module-content-347">
+<div class="ui-widget app flexpage last-app">
+	<div class="ui-widget-header ui-helper-hidden">
+		
+	</div>
+	
+	<div class="ui-widget-detail">
+		
+<div class="ui-article last-article"><span style="display: block; text-align: right;"><a class="ui-btn-euedit" id="_imgSwitch1" href="javascript:I_EditToggle("_spanEdit1","editable-346-1","_imgSwitch1","editable-346-1_")" onclick="AddAnalyticsEvent("App", "Edit", "Inline Edit"); blur();" style="text-decoration:none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span><span id="_spanEdit1" style="display: none;"><iframe id="__div1" frameborder="0" style="width: 100%; border: 1px solid rgb(227, 227, 227);"></iframe><br><a id="__div1src" href="javascript:I_ViewHTML("__div1")" style="font-size: 10px;">View HTML</a><textarea id="editable-346-1_" name="editable-346-1_" style="width: 100%; display: none;" class="editThis"></textarea></span><span class="editThis" id="editable-346-1" datafield="Data" pageid="333" recordid="127"><div>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</div>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</span></div> 
+<div class="clear"></div>
+	
+	</div>
+	<div class="ui-widget-footer">
+		
+			
+		
+		<div class="clear"></div>
+	</div>
+</div>
+<input type="hidden" id="hidFullPath" value="http://swconsultant.schoolwires.net/">
+<input type="hidden" id="hidModuleInstanceID0" value="347">
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($("#hid-"+MIID+"-SidebarListView").length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent("http://swconsultant.schoolwires.net//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=173&PageID=333&ModuleInstanceID=" + MIID + "&PageModuleInstanceID=" + PMI + "&RenderLoc=0&FromRenderLoc=0&GroupYear=" + groupYear + "&GroupMonth=" + groupMonth + "&GroupByField=" + groupBy + "&EnableQuirksMode=0&ViewID=" + viewToUse + "&Tag=" + tag, container, 2, "chkSidebar();");
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $("#hid-"+MIID+"-DetailView").val();
+   }
+  GetContent("http://swconsultant.schoolwires.net//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=173&PageID=333&ModuleInstanceID=" + MIID + "&PageModuleInstanceID=" + PMI + "&FlexDataID=" + flexDataID + "&GroupYear=" + groupYear + "&GroupMonth=" + groupMonth + "&GroupByField=" + groupBy + "&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=" + tag + "&ViewID=" + targetView, container, 2, "chkSidebar();");
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($("#hid-"+MIID+"-SidebarListView").length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent("http://swconsultant.schoolwires.net//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=173&PageID=333&ModuleInstanceID=" + MIID + "&PageModuleInstanceID=" + PMI + "&RenderLoc=0&FromRenderLoc=0&Tag=" + tag + "&EnableQuirksMode=0&ViewID="+viewToUse, container, 2, "chkSidebar();");
+}
+</script>
+</div>
+
+</div></div>
+</div><div class="clear"></div></div></div>';
+
+$breadcrumbs = '<ul class="ui-breadcrumbs">
+<li class="ui-breadcrumb-first"><a href="/Domain/4"><span>Home</span></a></li>
+
+<li><a href="/domain/170"><span>District</span></a></li>
+
+<li class="ui-breadcrumb-last"><a href="/Domain/173"><span>Adam</span></a></li>
+
+</ul>';
+
+$channelBarReplace = str_replace('[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]', $channelBar, $spCode);
+$leftNavReplace = str_replace('[$PageListNavigation props="DisplayHeading:Yes"$]', $leftNav, $channelBarReplace);
+$breadCrumbReplace = str_replace('[$Breadcrumb props="MaxLevels:3"$]', $breadcrumbs, $leftNavReplace);
+$contentRegionReplace = str_replace('[$ContentLayoutPlaceholder$]', $contentRegion, $breadCrumbReplace);
+
+$subPage = $contentRegionReplace;
 
 $myStart = '<div id="sw-mystart-outer" class="noprint">
 <div id="sw-mystart-inner">

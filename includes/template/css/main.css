@@ -754,9 +754,68 @@ a.more-link {
 }
 #breadcrumbs {
 	float:left;
+	margin-top: 15px;
+}
+ul.ui-breadcrumbs > li {
+	position: relative;
+}
+ul.ui-breadcrumbs > li::before {
+	content:'/';
+	display: block;
+	position: absolute;
+	right:0px;
+	top:0px;
+	font-style: italic;
+	color:#7F1416;
+	font-weight: 800;
+	font-size: 12px;
+}
+ul.ui-breadcrumbs > li.ui-breadcrumb-last::before {
+	display: none;
+}
+ul.ui-breadcrumbs > li > a {
+	font-style: italic;
+	color:#7F1416;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 12px;
+	background:none;
+	padding-right: 10px;
 }
 #sp-search {
 	float:right;
+	width: 23px;
+	height: 23px;
+	overflow: hidden;
+	position: relative;
+	transition: width 0.5s ease;
+	margin-top: 18px;
+}
+#sp-search:hover {
+	width:150px;
+}
+#search-wrapper {
+	position: absolute;
+	left:0px;
+	top:0px;
+	width: 220px;
+}
+#search-icon {
+	cursor: pointer;
+	font-size: 23px;
+	color:#7F1416;
+	float:left;
+}
+#sw-mystart-search {
+	float:left;
+	background-color: transparent;
+}
+#sw-search-input {
+    color: #000;
+	
+}
+#sw-search-button {
+    display: none;
 }
 #sp-content-outer {
 	position: relative;
@@ -989,6 +1048,7 @@ h6 {
 
 /* ------------------------------------------------------------ */
 /* ---------- BEGIN 768+ ---------- */
+@media (max-width: 1023px) {
 /* ------------------------------------------------------------ */
                 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
@@ -1087,6 +1147,7 @@ ul.sw-channel-list li.sw-channel-item.last ul.sw-channel-dropdown {
 /* GroupEnd */
 
 /* ------------------------------------------------------------ */
+}
 /* ---------- END 768+ ---------- */
 /* ------------------------------------------------------------ */
 
@@ -1100,6 +1161,7 @@ ul.sw-channel-list li.sw-channel-item.last ul.sw-channel-dropdown {
 
 /* ------------------------------------------------------------ */
 /* ---------- BEGIN 640+ ---------- */
+@media (max-width: 767px) {    
 /* ------------------------------------------------------------ */
                 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
@@ -1185,6 +1247,7 @@ input.ui-txt-general.medium, textarea.ui-txt-general.medium, input.ui-txt-headin
 /* GroupEnd */
 
 /* ------------------------------------------------------------ */
+}
 /* ---------- END 640+ ---------- */
 /* ------------------------------------------------------------ */
 
@@ -1198,7 +1261,9 @@ input.ui-txt-general.medium, textarea.ui-txt-general.medium, input.ui-txt-headin
 
 /* ------------------------------------------------------------ */
 /* ---------- BEGIN 480+ ---------- */
+@media (max-width: 639px){
 /* ------------------------------------------------------------ */
+
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 /* GroupBegin Mystart */
@@ -1290,6 +1355,7 @@ body:before {
 /* GroupEnd */
 
 /* ------------------------------------------------------------ */
+}
 /* ---------- END 480+ ---------- */
 /* ------------------------------------------------------------ */ 
 
@@ -1303,6 +1369,7 @@ body:before {
 
 /* ------------------------------------------------------------ */
 /* ---------- BEGIN 320+ ---------- */
+@media (max-width: 479px) { 
 /* ------------------------------------------------------------ */                 
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
@@ -1363,7 +1430,8 @@ body:before {
 /* GroupEnd */
 
 /* ------------------------------------------------------------ */
-/* ---------- BEGIN 320+ ---------- */
+}
+/* ---------- END 320+ ---------- */
 /* ------------------------------------------------------------ */                 
                 
 
