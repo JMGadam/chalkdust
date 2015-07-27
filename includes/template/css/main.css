@@ -592,6 +592,40 @@ a.more-link {
 /* GroupEnd */
 
 /* GroupBegin Homepage */
+#hp-multimedia-outer {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	padding: 52px 0 0px 0;
+}
+#hp-multimedia-video {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	padding-top: 56.25%;
+	height: 0px;
+}
+#hp-multimedia-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url('http://swconsultant.schoolwires.net/cms/lib8/SW00000039/Centricity/Template/36/gb-background-pattern.png');
+}
+#hp-multimedia-gradient {
+	background: url('http://swconsultant.schoolwires.net/cms/lib8/SW00000039/Centricity/Template/36/gb-background-gradient.png');
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-size: 100%;
+}
 .column {
 	float: left;
 	position: relative;
@@ -602,7 +636,7 @@ a.more-link {
 #hp-content-outer {
 	position: relative;
 	margin-top: 52px;
-	background-color: #666;
+	/* background-color: #666; */
 }
 #hp-content {
 	max-width: 1280px;

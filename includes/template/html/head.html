@@ -4,6 +4,8 @@
 <!-- PLUGINS -->
 <script type="text/javascript" src="//extend.schoolwires.com/creative/scripts/creative/tools/head.min.js"></script>
 <script type="text/javascript" src="//extend.schoolwires.com/creative/scripts/joel/mod-events/joel.mod-events.min.js"></script>
+<script type="text/javascript" src="http://swconsultant.schoolwires.net/cms/lib8/SW00000039/Centricity/template/36/scripts/okvideo.min.js"></script>
+<script type="text/javascript" src="http://swconsultant.schoolwires.net/cms/lib8/SW00000039/Centricity/Template/36//scripts/frogaloop.js"></script>
 <!-- END PLUGINS -->
 <script type="text/javascript">
 	head.load([
@@ -219,6 +221,53 @@
 		$("li.sw-channel-item").last().addClass("last");
 		
 		// ********** BODY ********** //
+		//DOC load video
+		//if (!isMobile.any()) {
+			if($(".mb-video-player").length) {
+	      	  	$(".mb-video-player").okvideo({ 
+	      	  		source: '108792063',
+	      	  		onReady: function(){
+					var iframe = document.getElementById('okplayer');
+					//$f == Froogaloop
+					var player = $f(iframe);
+					
+					var playButton = document.getElementById('play-button');
+					playButton.addEventListener("click", function() {
+					  	player.api("play");
+					  	$(this).hide();
+						$(this).siblings(".pause-button").show();
+					});
+	
+					
+					var pauseButton = document.getElementById('pause-button');
+					pauseButton.addEventListener("click", function() {
+						player.api("pause");
+						$(this).hide();
+						$(this).siblings(".play-button").show();
+					});
+					
+					var playButton = document.getElementById('play-button2');
+					playButton.addEventListener("click", function() {
+					  	player.api("play");
+					  	$(this).hide();
+						$(this).siblings(".pause-button").show();
+					});
+	
+					
+					var pauseButton = document.getElementById('pause-button2');
+					pauseButton.addEventListener("click", function() {
+						player.api("pause");
+						$(this).hide();
+						$(this).siblings(".play-button").show();
+					});
+				 }
+	      	  	});
+	        }
+		// } else {
+	 //        $("#hp-multimedia-outer img").show();
+	 //        $("#hp-multimedia-video").hide();
+	 //        $(".hp-multimedia-video-button .button-text").hide();
+  //       }
 		//DOC rename first breadcrumb
 		$("li.ui-breadcrumb-first > a > span").text("Home");
 		//DOC replace more-link text
