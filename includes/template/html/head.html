@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
 <!--DOC Google Font Link -->
-<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:700italic,400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:700italic,300italic,400,700,300' rel='stylesheet' type='text/css'>
 <!-- PLUGINS -->
 <script type="text/javascript" src="//extend.schoolwires.com/creative/scripts/creative/tools/head.min.js"></script>
 <script type="text/javascript" src="//extend.schoolwires.com/creative/scripts/joel/mod-events/joel.mod-events.min.js"></script>
@@ -10,22 +10,24 @@
 <script type="text/javascript">
 	head.load([
 		{ rsMainMenu: "//extend.schoolwires.com/creative/scripts/creative/responsive/creative-responsive-menu-v2/creative.responsive.menu.v2.min.js" },
-		{ rsPagelistMenu: "//extend.schoolwires.com/creative/scripts/creative/responsive/creative-responsive-pagelist-menu-v2/creative.responsive.pagelist.menu.v2.min.js"},
-		{ mediaRotator: "//extend.schoolwires.com/creative/scripts/creative/rotate/cs.rs.multimedia.rotator.v2.min.js" }
+		{ rsPagelistMenu: "//extend.schoolwires.com/creative/scripts/creative/responsive/creative-responsive-pagelist-menu-v2/creative.responsive.pagelist.menu.v2.min.js"}
 	]);
 	
 	$(window).load(function(){
 		calendarListView();
+		searchText();
 	});
 	
 	$(function(){
 
 		windowHeight = '';
+		windowWidth = '';
 
 		$(window).bind("resize", function(){ 
 			jsMediaQueries();
 			calendarListView(); 
 			windowHeight = $(window).height(); 
+			windowWidth = $(window).width();
 			hpHeight(); 
 		});
 		
@@ -33,10 +35,10 @@
 			// RESPONSIVE MAIN MENU
 			$("body").csRsMenu({
 			        "breakPoint"            : 768, // SYSTEM BREAK POINTS - 768, 640, 480, 320
-			        "menuButtonParent"      : "#gb-channel-list",
+			        "menuButtonParent"      : "#header-right",
 			        "showMenuBtnText"       : "yes",
 			        "menuBtnText"           : "MENU",
-			        "showSchools"           : "no",
+			        "showSchools"           : "yes",
 			        "showTranslate"         : "no",
 			        "translateId"           : "none",
 			        "showAccount"           : "yes",
@@ -59,17 +61,14 @@
 		
 		jsMediaQueries();
 		useChannelForSection();
-
 		dynamicContent();
 		rotateHeadlines();
-		searchText();
 		hpHeight();
 		footerToggle();	
 		modEvents();
 		channelBarHover();
 		schoolsToChannelBar();	
 		addFramesetTranslate();	
-		searchText();
 	});	
 	
 	function jsMediaQueries(){
@@ -174,7 +173,7 @@
 		//DOC replace mystart dropdown arrows
 		$(".sw-myaccount-chevron, .sw-dropdown-arrow").text("▼");
 		$("#sw-mystart-search").appendTo("#search-wrapper, #hp-search .icon-content").show();
-		$("#sw-mystart-right").appendTo(".gb.footer.two");
+		$("#sw-mystart-right").addClass("hide768").appendTo(".gb.footer.two");
 
 
 		// ********** HEADER ********** //
@@ -222,7 +221,7 @@
 		
 		// ********** BODY ********** //
 		//DOC load video
-		//if (!isMobile.any()) {
+		if (!isMobile.any()) {
 			if($(".mb-video-player").length) {
 	      	  	$(".mb-video-player").okvideo({ 
 	      	  		source: '108792063',
@@ -235,7 +234,7 @@
 					playButton.addEventListener("click", function() {
 					  	player.api("play");
 					  	$(this).hide();
-						$(this).siblings(".pause-button").show();
+						$(this).siblings("#pause-button").show();
 					});
 	
 					
@@ -243,31 +242,31 @@
 					pauseButton.addEventListener("click", function() {
 						player.api("pause");
 						$(this).hide();
-						$(this).siblings(".play-button").show();
+						$(this).siblings("#play-button").show();
 					});
 					
-					var playButton = document.getElementById('play-button2');
-					playButton.addEventListener("click", function() {
-					  	player.api("play");
-					  	$(this).hide();
-						$(this).siblings(".pause-button").show();
-					});
+					// var playButton = document.getElementById('play-button2');
+					// playButton.addEventListener("click", function() {
+					//   	player.api("play");
+					//   	$(this).hide();
+					// 	$(this).siblings(".pause-button").show();
+					// });
 	
 					
-					var pauseButton = document.getElementById('pause-button2');
-					pauseButton.addEventListener("click", function() {
-						player.api("pause");
-						$(this).hide();
-						$(this).siblings(".play-button").show();
-					});
+					// var pauseButton = document.getElementById('pause-button2');
+					// pauseButton.addEventListener("click", function() {
+					// 	player.api("pause");
+					// 	$(this).hide();
+					// 	$(this).siblings(".play-button").show();
+					// });
 				 }
 	      	  	});
 	        }
-		// } else {
-	 //        $("#hp-multimedia-outer img").show();
-	 //        $("#hp-multimedia-video").hide();
-	 //        $(".hp-multimedia-video-button .button-text").hide();
-  //       }
+		} else {
+	        $("#hp-multimedia-outer img").show();
+	        $("#hp-multimedia-video").hide();
+	        $(".hp-multimedia-video-button .button-text").hide();
+        }
 		//DOC rename first breadcrumb
 		$("li.ui-breadcrumb-first > a > span").text("Home");
 		//DOC replace more-link text
@@ -326,15 +325,15 @@
 		//DOC custom mystart search placeholder
 	        //SEARCH TEXT
 	        $("div#sw-mystart-search input#sw-search-input").removeAttr("placeholder");
-		$("div#sw-mystart-search input#sw-search-input").attr("value", "Search...");
+		$("div#sw-mystart-search input#sw-search-input").attr("value", "Search");
 		$("div#sw-mystart-search input#sw-search-input").focus(function() {
-			if($(this).val() == "Search...") {
+			if($(this).val() == "Search") {
 				$(this).val("");
 			}
 		});
 		$("div#sw-mystart-search input#sw-search-input").blur(function() {
 			if($(this).val() == "") {
-				$(this).val("Search...");
+				$(this).val("Search");
 			}
 		});
 	}
@@ -369,6 +368,12 @@
 		$(".toggle-info").click(function(){
 			$("#gb-footer-info-outer").slideToggle();
 			$("#chevron-toggle").toggleClass("opened");
+			if(windowWidth < 1024 ){
+				$('html,body').animate({ scrollTop: 110 }, 'slow', function(){
+					
+				});
+			}
+
 		});
 		// Hide the footer if a click occurs anywhere outside of it.
 		// if($("#chevron-toggle").hasClass("opened")){
@@ -522,4 +527,51 @@
 		}
 		
 	}
+</script>
+<script type="text/javascript">
+	// GET BROWSER AND VERSION
+	var browser = getBrowser();
+	var browserName = browser[0].toLowerCase();
+	var browserVersion = Math.floor(parseInt(browser[1]));
+	
+	function getBrowser(){
+		var N = navigator.appName, ua=navigator.userAgent, tem;
+		var M = ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);
+		if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2] = tem[1];
+		M = M ? [M[1], M[2]] : [N, navigator.appVersion, '-?'];
+		return [M[0], M[1]];
+	}
+	
+	//hex to RGB
+	function hexToRgb(h){
+	        var r = parseInt((cutHex(h)).substring(0,2),16);
+	        var g = parseInt((cutHex(h)).substring(2,4),16);
+	        var b = parseInt((cutHex(h)).substring(4,6),16);
+	        return r+', '+g+', '+b;
+	};
+	 
+	function cutHex(h) {
+	        return (h.charAt(0)=="#") ? h.substring(1,7):h;
+	};
+	
+	var isMobile = {
+	    Android: function() {
+	        return navigator.userAgent.match(/Android/i);
+	    },
+	    BlackBerry: function() {
+	        return navigator.userAgent.match(/BlackBerry/i);
+	    },
+	    iOS: function() {
+	        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	    },
+	    Opera: function() {
+	        return navigator.userAgent.match(/Opera Mini/i);
+	    },
+	    Windows: function() {
+	        return navigator.userAgent.match(/IEMobile/i);
+	    },
+	    any: function() {
+	        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	    }
+	};
 </script>

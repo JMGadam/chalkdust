@@ -21,7 +21,7 @@
 					</div>
 				</div>
 				<div id="header-right">
-					<div id="gb-channel-list">
+					<div id="gb-channel-list" class="hide768">
 						[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]
 					</div>
 				</div>
@@ -36,17 +36,11 @@
 	<div id="hp-content-outer">
 		<div id="hp-content">
 			<div class="inner">
-				<div id="hp-content-top" class="ui-clear">
+				<div id="hp-content-top" class="ui-clear hide768">
 					<div id="hp-icons">
 						<a id="hp-search" class="hp-icon gb-search">
 							<span class="icon-content">
 								<span class="icon-font">1</span>
-							</span>
-						</a>
-						<a class="hp-icon menu">
-							<span class="icon-content">
-								<span class="icon-font">2</span>
-								<span class="icon-text">Menu</span>
 							</span>
 						</a>
 						<a class="hp-icon menu">
@@ -92,11 +86,21 @@
 						[$ContentRegion props="ContainerNumber:2"$]
 					</div>
 				</div>
-				<div id="hp-tagline" class="ui-clear">
+				<div id="hp-below-content" class="ui-clear">
 					<div id="tagline-text">
 						<span class="large-text">ONE</span> Community, <span class="large-text">ONE</span> District, <span class="large-text">ONE</span> Vision, for <span class="large-text">All Children</span>
 					</div>
-					<a id="tagline-button"></a>
+					<a id="tagline-button" class="icon-font">8</a>
+					<div id="video-controls" class="hide768">
+						<div id="play-button">
+							<span class="control-text">Play Video</span>
+							<a class="control-button icon-font">8</a>
+						</div>
+						<div id="pause-button">
+							<span class="control-text">Pause Video</span>
+							<a class="control-button icon-font">7</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
