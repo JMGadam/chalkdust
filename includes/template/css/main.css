@@ -436,7 +436,7 @@ div.sw-special-mode-bar {
 div.ui-widget.app div.ui-widget-header h1, div.ui-widget.app.navigation div.ui-widget-header h1 {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 800;
-    font-size: 26px;
+    font-size: 18px;
     color: #7F1416;
     text-transform: uppercase;
 }
@@ -577,6 +577,7 @@ a.more-link {
 }
 .hp div.ui-widget.app div.ui-widget-header h1 {
 	color: #fff;
+	font-size: 26px;
 }
 .custom-more-info {
 	display: none;
@@ -926,13 +927,14 @@ ul.ui-breadcrumbs > li > a {
 	position: relative;
 }
 .sp.column.one {
-	width: 25%;
+	width: 21%;
 	min-height: 500px;
-	padding: 0px 10px 0px 0px;
+	padding: 0px 5px 0px 0px;
 }
-.sp.column.one div.ui-widget.app.navigation div.ui-widget-header h1 {
-	text-transform: uppercase;
-	margin-bottom: 32px;
+.sp div.ui-widget-header h1 {
+	/* text-transform: uppercase; */
+	margin-bottom: 28px;
+	/* font-size: 18px; */
 }
 .sp.column.one div.ui-widget.app.navigation li {
     padding: 0px;
@@ -985,9 +987,15 @@ ul.ui-breadcrumbs > li > a {
 	position: relative;
 }
 .sp.column.two {
-	width: 75%;
+	width: 79%;
 	min-height: 500px;
-	padding: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 37px;
+}
+.sp.column.two div.ui-widget-detail {
+	line-height: 1.8;
+}
+.sp #footer-gradient {
+	display: none !important;
 }
 /* GroupEnd */
 
@@ -996,10 +1004,10 @@ ul.ui-breadcrumbs > li > a {
 	position: relative;
 }
 #spn-content {
-	max-width: 960px;
+	max-width: 1280px;
 	min-height: 500px;
 	margin: 0px auto;
-	padding: 10px;
+	/* padding: 10px; */
 	position: relative;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -2029,6 +2037,7 @@ input.ui-txt-general.medium, textarea.ui-txt-general.medium, input.ui-txt-headin
 
 }
 #sp-content-header-outer {
+    margin-top: 0px;
 
 }
 #sp-content-header {
@@ -2182,6 +2191,7 @@ body:before {
 
 }
 #small-logo .gb-logo {
+    width: 24px;
 
 }
 #small-logo .gb-sitename {
@@ -2571,6 +2581,11 @@ ul.ui-breadcrumbs > li > a {
 .sp.column.two {
 	width: auto;
 	float: none;
+	padding: 0px;
+}
+#rs-pagelist-menu-btn:before {
+	background:#7F1416;
+	border-radius: 0px;
 }
 /* GroupEnd */
 
@@ -2651,6 +2666,7 @@ body:before {
 
 }
 #small-logo .gb-logo {
+    width: 49px;
 
 }
 #small-logo .gb-sitename {
@@ -2660,7 +2676,9 @@ body:before {
 	
 }
 #small-logo .gb-sitename h1 {
+    display: block;
 
+    margin: 0px;
 }
 #small-logo .gb-sitename h2 {
 

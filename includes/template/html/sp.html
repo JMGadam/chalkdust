@@ -9,7 +9,7 @@
 					</div>
 				</div>
 				<div id="header-right">
-					<div id="gb-channel-list">
+					<div id="gb-channel-list" class="hide768">
 						[$ChannelListNavigation props="DisplayType:Text;SectionMax:<SWCtrl controlname="Custom" props="Name:sectionMax" />;DirectoryType:6;DisplayHomeButton:<SWCtrl controlname="Custom" props="Name:showHomeChannel" />;DisplayCalendarButton:<SWCtrl controlname="Custom" props="Name:showCalendarChannel" />;HideSingleSectionDD:<SWCtrl controlname="Custom" props="Name:hideSingleSectionDD" />"$]
 					</div>
 				</div>
@@ -31,16 +31,19 @@
 		</div>
 	</div>
 	<div id="sp-content-outer">
-		<div id="sp-content" class="ui-clear">
-			<div class="sp column one noprint hide480">
-				[$PageListNavigation props="DisplayHeading:Yes"$]
-			</div>
-			<div class="sp column two">
-				[$ContentLayoutPlaceholder$]
+		<div id="sp-content">
+			<div class="inner ui-clear">
+				<div class="sp column one noprint hide480">
+					[$PageListNavigation props="DisplayHeading:Yes"$]
+				</div>
+				<div class="sp column two">
+					[$ContentLayoutPlaceholder$]
+				</div>
 			</div>
 		</div>
 	</div>
 	<div id="gb-footer-wrapper">
+		<div id="footer-gradient" class="show768"></div>
 		<div id="gb-footer-outer">
 			<div id="gb-footer">
 				<div class="inner ui-clear">
@@ -55,11 +58,11 @@
 						<div class="sw-mystart-button">
 							<a href="#"><span>DISTRICT HOME</span></a>
 						</div>
-						<div class="sw-mystart-button sitemap">
+						<div class="sw-mystart-button sitemap hide768">
 							<a href="#"><span>SITEMAP</span></a>
 						</div>
 					</div>
-					<div class="gb footer two ui-clear">
+					<div class="gb footer two ui-clear hide480">
 						<div id="social-icons" class="ui-clear">
 							<a class="sc-ico fb">
 								<img src="img/icon-facebook.png"/>
